@@ -1,16 +1,32 @@
 .landingbox-first {
   position: fixed;
-  bottom: 0;
+  top: 0;
+  left: 0;
   min-width: 100%;
   min-height: 100%; }
-
+@media(max-width: 600px) {
+  .landingbox-first {
+    left: 50%;
+    transform: translateX(-50%); } }
 .landingbox-next {
-  position: relative;
+  animation-name: movevideo;
+  animation-timing-function: cubic-bezier(0.947, 0, 1, 1);
+  -webkit-animation-name: movevideo;
+  -webkit-animation-timing-function: cubic-bezier(0.947, 0, 1, 1);
+  animation-duration: 500ms;
+  position: fixed;
   padding: 0 95px;
   width: 100%; }
 @media(max-width: 600px) {
   .landingbox-next {
     padding: 0 30px; } }
+@keyframes movevideo {
+  0% {
+    top: 0;
+    padding: 0; }
+  100% {
+    top: 200px;
+    padding: 0 95px; } }
 .gray {
   background-color: #f2f2f2;
   height: 50px; }
