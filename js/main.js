@@ -1,16 +1,7 @@
-function Universe() {
-    let instance;
-    Universe = function Universe() {
-        return instance;
-    };
+var video = document.getElementById('video');
 
-    Universe.prototype = this;
-    instance = new Universe();
+video.addEventListener('click', addlandingcss);
 
-    instance.start_time = 0;
-    instance.bang = 'Big';
-    return instance;
-    console.log(instance)
+function addlandingcss() {
+     video.className = 'landingbox-next';
 }
-
-Universe();
