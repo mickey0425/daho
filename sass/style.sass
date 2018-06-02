@@ -1,34 +1,46 @@
-.landingbox-first
-  position: fixed
-  top: 0
-  left: 0
-  min-width: 100%
+.wrapper
+  position: relative
+  margin: 0
+  height: auto!important
+  height: 100%
   min-height: 100%
-  @media(max-width: 600px)
-    left: 50%
-    transform: translateX(-50%)
-
-.landingbox-next
-  animation-name: movevideo
-  animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
-  -webkit-animation-name: movevideo
-  -webkit-animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
-  animation-duration: 500ms
-  position: fixed
-  padding: 0 95px
+  overflow: hidden
   width: 100%
-  @media(max-width: 600px)
-    padding: 0 30px
 
-@keyframes movevideo
+.wrapper-next
+  position: relative
+  margin: 0
+  height: auto!important
+  height: 100%
+  min-height: 100%
+  // overflow: hidden
+  width: 100%
+
+.header-first
+  position: absolute
+  top: -200px
+  background-color: #FFF
+  z-index: 50
+  width: 100%
+
+.header-next
+  position: absolute
+  top: 0
+  background-color: #fff
+  z-index: 50
+  width: 100%
+  animation-name: moveheader
+  animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
+  animation-duration: 500ms
+  -webkit-animation-name: moveheader
+  -webkit-animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
+  -webkit-animation-duration: 500ms
+
+@keyframes moveheader
   0%
-    top: 0
-    padding: 0
+    top: -200px
   100%
-    top: 200px
-    padding: 0 95px
-
-
+    top: 0
 
 .gray
   background-color: #f2f2f2
@@ -36,17 +48,18 @@
 
 .logo
   text-align: left
-
+  height: 70px
 .navbar
-  padding: 40px 80px
+  padding: 40px 65px
+  height: 150px
   @media(max-width: 600px)
     padding: 40px 15px
 
 .navbar-collapse
   justify-content: flex-end
 .navbar-nav
+  background-color: #fff
   justify-content: center
-
 
 a
   text-align: center
@@ -60,7 +73,6 @@ a
     color: #4a4a4a
   @media(max-width: 996px)
     margin : 5px auto
-
 
 a:nth-child(4)
   width: 180px
@@ -144,9 +156,120 @@ a:nth-child(4)
   transform: scaleX(1)
 
 
-.videobox
-  padding: 0 80px
-  @media(max-width: 600px)
-    padding: 0 15px
+.video-wrapper-first
+  position: relative
+  width: 100vw
+  height: 100vh
+
   video
-    width: 100%
+    position: absolute
+    width: 100vw
+    height: 100vh
+    object-fit: fill
+    padding: 0 0
+    @media(max-width: 600px)
+      left: 50%
+      transform: translateX(-50%)
+
+
+.video-wrapper-next
+  position: relative
+  width: 100vw
+  height: 100vh
+
+  video
+    position: absolute
+    width: 100vw
+    height: 100vh
+    object-fit: fill
+    padding: 0 80px
+    animation-name: movevideo
+    animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
+    animation-duration: 500ms
+    -webkit-animation-name: movevideo
+    -webkit-animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
+    -webkit-animation-duration: 500ms
+    @media(max-width: 600px)
+      padding: 0 30px
+
+@keyframes movevideo
+  0%
+    padding: 0 0px
+  100%
+    padding: 0 80px
+
+
+
+
+.contant
+  height: 500px
+  width: 100%
+  background-color: #fff
+  position: absolute
+  bottom: -500px
+  padding: 0 80px
+
+.contant-next
+  height: 500px
+  width: 100%
+  background-color: #fff
+  position: absolute
+  bottom: -300px
+  padding: 0 80px
+  animation-name: movecontant
+  animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
+  animation-duration: 500ms
+  -webkit-animation-name: movecontant
+  -webkit-animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
+  -webkit-animation-duration: 500ms
+
+@keyframes movecontant
+  0%
+    bottom: -500px
+  100%
+    bottom: -300px
+
+
+
+
+
+// .landingbox-first
+//   overflow: hidden
+//   padding: 0 0
+//   position: fixed
+//   left: 0
+//   top: 0
+//   min-width: 100vw
+//   min-height: 100vw
+//   z-index: 50
+//
+//   video
+//     width: 100%
+//     height: 100%
+//     @media(max-width: 600px)
+//       left: 50%
+//       transform: translateX(-50%)
+
+
+
+
+// .landingbox-next
+//   animation-name: movevideo
+//   animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
+//   animation-duration: 500ms
+//   -webkit-animation-name: movevideo
+//   -webkit-animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
+//   -webkit-animation-duration: 500ms
+//   position: fixed
+//   right: 0
+//   bottom: 0
+//   min-width: 100%
+//   min-height: 100%
+//
+//   transform: scale(0,0)
+//
+// @keyframes movevideo
+//   0%
+//     transform: scale(1,1)
+//   100%
+//     transform: scale(0,0)
