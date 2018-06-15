@@ -1,0 +1,301 @@
+
+.contant
+  height: 500px
+  width: 100%
+  background-color: #fff
+  position: absolute
+  bottom: -500px
+  padding: 0 80px
+
+.contant-next
+
+  height: 500px
+  width: 100%
+  background-color: #fff
+  position: absolute
+  bottom: -300px
+  padding: 0 80px
+  animation-name: movecontant
+  animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
+  animation-duration: 500ms
+  -webkit-animation-name: movecontant
+  -webkit-animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
+  -webkit-animation-duration: 500ms
+  background-image: url(../img/logo-bg.png)
+  background-repeat: no-repeat
+  background-position: 0 0
+  background-size: 946px 519px
+  @media(max-width :600px)
+    padding: 0 30px
+
+@keyframes movecontant
+  0%
+    bottom: -500px
+  100%
+    bottom: -300px
+
+.about-us
+  margin-top: 100px
+.about-us-main
+  @media(max-width: 600px)
+    flex-direction: column-reverse
+
+.about-us-logo
+  width: 100%
+  text-align: left
+  height: 100px
+  padding: 10px 0
+  img
+    height: 100%
+  @media(max-width: 600px)
+    text-align: center
+
+.about-video
+  padding: 80px 0
+  a
+    color: #000
+    text-decoration: none
+  p
+    margin-bottom: 0
+    font-size: 15px
+    display: inline-block
+    margin-left: 10px
+
+    @media(max-width: 600px)
+      display: block
+      margin: 10px 0 0 0
+
+  @media(max-width: 600px)
+    text-align: center
+
+.about-contant
+  @media(max-width: 600px)
+    margin-top: 50px
+
+.gallery
+  margin: 50px 0 90px
+
+.gallery-main
+  margin: 0
+  @media(max-width: 600px)
+    margin: 0 -30px
+
+.gallery-logo
+  margin-bottom: 20px
+  @extend .about-us-logo
+
+.gallery-family
+  padding: 150px 75px 0 0
+  @media(max-width: 600px)
+    padding: 40px 0
+  .photo-box
+    position: relative
+    img
+      width: 100%
+      max-height: 380px
+
+    button
+      cursor: pointer
+      position: absolute
+      bottom: 30px
+      right: 0
+      text-align: left
+      width: 230px
+      height: 110px
+      background-color: #FFF
+      border: 0
+      font-size: 25px
+      font-weight: bold
+      color: #4a4a4a
+      @media(max-width: 600px)
+        bottom: -65px
+      &:hover
+        color: #fff
+    span
+      font-size: 15px
+
+.gallery-wedding
+  padding: 0 0 150px 75px
+  @media(max-width: 600px)
+    padding: 40px 0
+  .photo-box
+    position: relative
+    img
+      width: 100%
+      max-height: 380px
+    button
+      cursor: pointer
+      position: absolute
+      bottom: 30px
+      left: 0
+      text-align: right
+      width: 230px
+      height: 110px
+      background-color: #FFF
+      border: 0
+      font-size: 25px
+      font-weight: bold
+      color: #4a4a4a
+      @media(max-width: 600px)
+        bottom: -65px
+      &:hover
+        color: #fff
+      span
+        font-size: 15px
+
+.gallery-video
+  padding: 150px 75px 0 0
+  @media(max-width: 600px)
+    padding: 40px 0
+  @extend .gallery-family
+
+.gallery-recording
+  padding: 0 0 0 75px
+  @media(max-width: 600px)
+    padding: 40px 0
+  @extend .gallery-wedding
+
+.gallery-bt-all
+  position: relative
+  margin : 105px 0 0 0
+  width: 200px
+  height: 45px
+  // background-color: #4a4a4a
+  // color: #fff
+  font-size: 15px
+  font-weight: bold
+  cursor: pointer
+  @media(max-width: 600px)
+    transform: translateX(-50%)
+    left: 50%
+    right: 50%
+
+.plan-logo
+  margin-bottom: 20px
+  @extend .about-us-logo
+
+.plan-main
+  margin: 0 -80px
+  @media(max-width: 600px)
+    margin: 0 -30px
+.plan
+  a
+    text-decoration: none
+
+.plan-box
+  margin-top: 20px
+  width: 100%
+  height: 400px
+  font-size: 0
+  // display: flex
+  @media(max-width:600px)
+    display: flex
+    height: 600px
+    flex-wrap: wrap
+
+.plan-box-odd
+  @extend .plan-box
+  @media(max-width:600px)
+    flex-direction: column-reverse
+
+.plan-img-1
+  width: calc(100% - 290px)
+  height: 400px
+  display: inline-block
+  background-image: url(../img/test1.png)
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: 50% 0
+  @media(max-width:600px)
+    width: 100%
+
+.plan-img-2
+  @extend .plan-img-1
+  background-image: url(../img/test2.png)
+
+.plan-img-3
+  @extend .plan-img-1
+  background-image: url(../img/test3.png)
+
+.plan-img-4
+  @extend .plan-img-1
+  background-image: url(../img/test2.png)
+
+.plan-contant
+  width: 290px
+  // height: 400px
+  display: inline-block
+  background-color: #fff
+  text-align: center
+  @media(max-width:600px)
+    width: 100%
+    height: 200px
+  div
+    position: relative
+    top: 50%
+    transform: translateY(-50%)
+  p
+    font-size: 25px
+    color: #4a4a4a
+    margin-bottom: 0
+    @media(max-width: 600px)
+      font-size: 17px
+
+.plan-contant-left
+  width: 100%
+.plan-contant-right
+  width: 100%
+
+.plan-contant-left
+  padding: 30px 0
+  font-size: 15px
+  color: #4a4a4a
+  padding-left: 80px
+  @media(max-width: 600px)
+    display: none
+
+.plan-contant-right
+  @extend .plan-contant-left
+  padding-left : 290px
+
+.bt-all
+  width: 100%
+  text-align: center
+  padding: 60px 0
+  button
+    border: solid 1px #4a4a4a
+    width: 200px
+    height: 45px
+    // background-color: #4a4a4a
+    font-size: 15px
+    color: #fff
+    cursor: pointer
+
+
+
+.follow-us
+  text-align: center
+  padding: 50px 0
+
+.fb-ig
+  text-align: center
+  padding: 30px 0
+  a
+    padding: 0 25px
+    text-decoration: none
+  i
+    font-size: 33px
+    color: #4a4a4a
+
+.follow-main
+  margin-top: 30px
+  @media(max-width:600px)
+    margin-top: 15px
+
+.follow-img
+  @media(max-width:600px)
+  margin-bottom: 30px
+  img
+    width: 100%
+    cursor: pointer
+    height: auto
