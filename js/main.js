@@ -9,6 +9,12 @@ var menulist = document.getElementById('menulist');
 var menu = document.getElementById('menu');
 var contant = document.getElementById('contant');
 
+//gallery-button
+// var gfamily = document.getElementsByClassName('gallery-family')
+// var gwedding = document.getElementsByClassName('gallery-wedding')
+// var gvideo = document.getElementsByClassName('gallery-video')
+// var grecording = document.getElementsByClassName('gallery-recording')
+
 //cloth
 var clothleft = document.getElementById('clothleft');
 var clothright = document.getElementById('clothright');
@@ -22,8 +28,14 @@ video.addEventListener('click', addcontantcss);
 
 menuButton.addEventListener('click', openMenu);
 menuButton.addEventListener('click', changeIcon);
-
 video.addEventListener('click', ClothOn);
+
+// gfamily.addEventListener('onmouseover', galleryhover)
+// gwedding.addEventListener('onmouseover', galleryhover)
+// gvideo.addEventListener('onmouseover', galleryhover)
+// grecording.addEventListener('onmouseover', galleryhover)
+
+
 
 function changewrapper() {
   wrapper.className = 'wrapper-next';
@@ -75,3 +87,9 @@ function ClothOn() {
   clothright.className = 'cloth-right-on';
   clothleft.className = 'cloth-left-on';
 }
+
+//galleryhover
+
+// function galleryhover (){
+//
+// }

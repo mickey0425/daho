@@ -15,6 +15,62 @@
   min-height: 100vh;
   width: 100%; }
 
+.wrapper-logo {
+  position: absolute;
+  top: 45px;
+  left: 80px;
+  z-index: 50;
+  width: 220px;
+  height: 95px;
+  opacity: 0;
+  animation-name: fade-in;
+  animation-timing-function: cubic-bezier(0.947, 0, 1, 1);
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: fade-in;
+  -webkit-animation-timing-function: cubic-bezier(0.947, 0, 1, 1);
+  -webkit-animation-duration: 500ms;
+  -webkit-animation-fill-mode: forwards; }
+  .wrapper-logo img {
+    width: 100%;
+    height: 100%; }
+@media(max-width:600px) {
+  .wrapper-logo {
+    left: 50%;
+    transform: translateX(-50%); } }
+.wrapper-context {
+  position: absolute;
+  top: 175px;
+  right: 80px;
+  z-index: 50;
+  background-color: #fff;
+  padding: 33px;
+  width: 388px;
+  display: block;
+  opacity: 0;
+  animation-name: fade-in;
+  animation-timing-function: cubic-bezier(0.947, 0, 1, 1);
+  animation-duration: 500ms;
+  animation-delay: 1800ms;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: fade-in;
+  -webkit-animation-timing-function: cubic-bezier(0.947, 0, 1, 1);
+  -webkit-animation-duration: 500ms;
+  -webkit-animation-delay: 1800ms;
+  -webkit-animation-fill-mode: forwards; }
+@media(max-width:600px) {
+  .wrapper-context {
+    display: none; } }
+  .wrapper-context h3 {
+    font-size: 21px;
+    color: #4a4a4a; }
+  .wrapper-context span {
+    font-style: italic; }
+  .wrapper-context p {
+    font-size: 14px;
+    line-height: 2.36;
+    color: #4a4a4a; }
+
 .header-first {
   position: absolute;
   top: -200px;
@@ -144,7 +200,18 @@ video {
 
 .video-wrapper-first {
   position: relative;
-  min-height: 100vh; }
+  min-height: 100vh;
+  animation-name: fade-in;
+  opacity: 0;
+  animation-timing-function: cubic-bezier(0.947, 0, 1, 1);
+  animation-duration: 500ms;
+  animation-delay: 1000ms;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: fade-in;
+  -webkit-animation-timing-function: cubic-bezier(0.947, 0, 1, 1);
+  -webkit-animation-duration: 500ms;
+  -webkit-animation-delay: 1000ms;
+  -webkit-animation-fill-mode: forwards; }
   .video-wrapper-first video {
     position: absolute;
     padding: 0 0;
@@ -229,5 +296,10 @@ video {
     right: -80px; }
   100% {
     right: 0; } }
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 /*# sourceMappingURL=header-video.css.map */

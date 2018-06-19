@@ -84,7 +84,10 @@
   .gallery-family, .gallery-video {
     padding: 40px 0; } }
   .gallery-family .photo-box, .gallery-video .photo-box {
-    position: relative; }
+    position: relative !important; }
+    .gallery-family .photo-box:hover button, .gallery-video .photo-box:hover button {
+      background-position: 0px 0px;
+      color: #fff; }
     .gallery-family .photo-box img, .gallery-video .photo-box img {
       width: 100%;
       max-height: 380px; }
@@ -100,14 +103,22 @@
       border: 0;
       font-size: 25px;
       font-weight: bold;
-      color: #4a4a4a; }
+      color: #4a4a4a;
+      background-image: url(../img/4aback.png);
+      background-position: -235px 0;
+      background-size: auto;
+      background-repeat: no-repeat; }
 @media(max-width: 600px) {
   .gallery-family .photo-box button, .gallery-video .photo-box button {
     bottom: -65px; } }
-      .gallery-family .photo-box button:hover, .gallery-video .photo-box button:hover {
-        color: #fff; }
     .gallery-family .photo-box span, .gallery-video .photo-box span {
       font-size: 15px; }
+
+.sweep-to-right {
+  transition-timing-function: cubic-bezier(0.947, 0, 1, 1);
+  transition-duration: 300ms;
+  -webkit-transition-timing-function: cubic-bezier(0.947, 0, 1, 1);
+  -webkit-transition-duration: 300ms; }
 
 .gallery-wedding, .gallery-recording {
   padding: 0 0 150px 75px; }
@@ -116,6 +127,9 @@
     padding: 40px 0; } }
   .gallery-wedding .photo-box, .gallery-recording .photo-box {
     position: relative; }
+    .gallery-wedding .photo-box:hover button, .gallery-recording .photo-box:hover button {
+      background-position: 0px 0px;
+      color: #fff; }
     .gallery-wedding .photo-box img, .gallery-recording .photo-box img {
       width: 100%;
       max-height: 380px; }
@@ -131,12 +145,14 @@
       border: 0;
       font-size: 25px;
       font-weight: bold;
-      color: #4a4a4a; }
+      color: #4a4a4a;
+      background-image: url(../img/4aback.png);
+      background-position: -235px 0;
+      background-size: auto;
+      background-repeat: no-repeat; }
 @media(max-width: 600px) {
   .gallery-wedding .photo-box button, .gallery-recording .photo-box button {
     bottom: -65px; } }
-      .gallery-wedding .photo-box button:hover, .gallery-recording .photo-box button:hover {
-        color: #fff; }
       .gallery-wedding .photo-box button span, .gallery-recording .photo-box button span {
         font-size: 15px; }
 
@@ -155,9 +171,11 @@
   margin: 105px 0 0 0;
   width: 200px;
   height: 45px;
+  border: 1px solid #4a4a4a;
   font-size: 15px;
   font-weight: bold;
-  cursor: pointer; }
+  cursor: pointer;
+  border: 1px solid #4a4a4a; }
 @media(max-width: 600px) {
   .gallery-bt-all {
     transform: translateX(-50%);
@@ -282,5 +300,44 @@
     width: 100%;
     cursor: pointer;
     height: auto; }
+
+.hvr-sweep-to-right {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s; }
+
+.hvr-sweep-to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #4a4a4a;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.947, 0, 1, 1);
+  transition-timing-function: cubic-bezier(0.947, 0, 1, 1); }
+
+.hvr-sweep-to-right:active, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:hover {
+  color: #fff; }
+
+.hvr-sweep-to-right:active:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:hover:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1); }
 
 /*# sourceMappingURL=contant.css.map */

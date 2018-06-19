@@ -89,11 +89,14 @@
   @media(max-width: 600px)
     padding: 40px 0
   .photo-box
-    position: relative
+    position: relative !important
+    &:hover
+      button
+        background-position: 0px 0px
+        color: #fff
     img
       width: 100%
       max-height: 380px
-
     button
       cursor: pointer
       position: absolute
@@ -107,12 +110,22 @@
       font-size: 25px
       font-weight: bold
       color: #4a4a4a
+      background-image: url(../img/4aback.png)
+      background-position: -235px 0
+      background-size: auto
+      background-repeat: no-repeat
       @media(max-width: 600px)
         bottom: -65px
-      &:hover
-        color: #fff
+
+
     span
       font-size: 15px
+
+.sweep-to-right
+  transition-timing-function: cubic-bezier(0.947, 0, 1, 1)
+  transition-duration: 300ms
+  -webkit-transition-timing-function: cubic-bezier(0.947, 0, 1, 1)
+  -webkit-transition-duration: 300ms
 
 .gallery-wedding
   padding: 0 0 150px 75px
@@ -120,6 +133,10 @@
     padding: 40px 0
   .photo-box
     position: relative
+    &:hover
+      button
+        background-position: 0px 0px
+        color: #fff
     img
       width: 100%
       max-height: 380px
@@ -136,10 +153,12 @@
       font-size: 25px
       font-weight: bold
       color: #4a4a4a
+      background-image: url(../img/4aback.png)
+      background-position: -235px 0
+      background-size: auto
+      background-repeat: no-repeat
       @media(max-width: 600px)
         bottom: -65px
-      &:hover
-        color: #fff
       span
         font-size: 15px
 
@@ -160,11 +179,13 @@
   margin : 105px 0 0 0
   width: 200px
   height: 45px
+  border: 1px solid #4a4a4a
   // background-color: #4a4a4a
   // color: #fff
   font-size: 15px
   font-weight: bold
   cursor: pointer
+  border: 1px solid #4a4a4a
   @media(max-width: 600px)
     transform: translateX(-50%)
     left: 50%
@@ -299,3 +320,45 @@
     width: 100%
     cursor: pointer
     height: auto
+
+.hvr-sweep-to-right
+  display: inline-block
+  vertical-align: middle
+  -webkit-transform: perspective(1px) translateZ(0)
+  transform: perspective(1px) translateZ(0)
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0)
+  position: relative
+  -webkit-transition-property: color
+  transition-property: color
+  -webkit-transition-duration: .3s
+  transition-duration: .3s
+
+
+.hvr-sweep-to-right:before
+  content: ""
+  position: absolute
+  z-index: -1
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background: #4a4a4a
+  -webkit-transform: scaleX(0)
+  transform: scaleX(0)
+  -webkit-transform-origin: 0 50%
+  transform-origin: 0 50%
+  -webkit-transition-property: transform
+  transition-property: transform
+  -webkit-transition-duration: .3s
+  transition-duration: .3s
+  -webkit-transition-timing-function: cubic-bezier(0.947, 0, 1, 1)
+  transition-timing-function: cubic-bezier(0.947, 0, 1, 1)
+
+
+.hvr-sweep-to-right:active, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:hover
+  color: #fff
+
+
+.hvr-sweep-to-right:active:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:hover:before
+  -webkit-transform: scaleX(1)
+  transform: scaleX(1)
