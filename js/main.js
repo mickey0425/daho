@@ -62,14 +62,17 @@ function movewraplogo() {
 }
 
 function movewraptext() {
-  wraptext.className = 'wrapper-context-next';
-  
+  wraptext.className = 'wrapper-context-next ';
+  setTimeout(function () {
+
+     wraptext.style.display= 'none'
+  }, 300); //delete wrapper-context after animation
+
 }
 
 function movewrapbtn() {
   wrapbtn.style.display = 'none';
 }
-
 
 
 function addheadercss() {
@@ -81,22 +84,27 @@ function addcontantcss() {
 }
 
 function openMenu() {
-  if (menu.className.indexOf('menu open') >= 0) {
-    menu.className = 'menu';
-  } else {
-    menu.className = 'menu open';
-  }
+  // if (menu.className.indexOf('menu open') >= 0) {
+  //   menu.className = 'menu';
+  // } else {
+  //   menu.className = 'menu open';
+  // }
 }
 
 function changeIcon() {
 
-  if (menuButton.className.indexOf('menu-button close') >= 0) {
+  if (menuButton.className.indexOf('menu-button-close') >= 0) {
     menuButton.className = 'menu-button';
-    menulist.className = 'menu-list';
+    menulist.className = 'menu-list-out';
+    setTimeout(function () {
+
+       menulist.className = 'menu-list';
+    }, 300);
+
 
   } else {
-    menuButton.className = 'menu-button close';
-    menulist.className = 'menu-list-next';
+    menuButton.className = 'menu-button-close';
+    menulist.className = 'menu-list-in';
   }
 
 }

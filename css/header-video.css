@@ -106,7 +106,7 @@
   animation-name: right-out;
   animation-timing-function: cubic-bezier(0.947, 0, 1, 1);
   animation-duration: 300ms;
-  -webkit-animation-delay: 0ms;
+  animation-delay: 0ms;
   animation-fill-mode: forwards;
   -webkit-animation-name: right-out;
   -webkit-animation-timing-function: cubic-bezier(0.947, 0, 1, 1);
@@ -115,6 +115,7 @@
   -webkit-animation-fill-mode: forwards; }
 @media(max-width:600px) {
   .wrapper-context-next {
+    -webkit-animation-play-state: paused;
     animation-play-state: paused;
     display: none; } }
 .wrapper-btn {
@@ -153,7 +154,7 @@
   height: 150px; }
 
 .header-next {
-  position: absolute;
+  position: fixed;
   top: -200px;
   background-color: #fff;
   z-index: 50;
@@ -190,14 +191,14 @@
   cursor: pointer;
   z-index: 201; }
 
-.menu-list, .menu-list-next {
+.menu-list, .menu-list-in, .menu-list-out {
   width: auto;
   position: relative;
   text-align: right;
   height: 70px;
   padding: 15px 0;
   display: block; }
-  .menu-list a, .menu-list-next a {
+  .menu-list a, .menu-list-in a, .menu-list-out a {
     cursor: pointer;
     text-align: center;
     color: #4a4a4a;
@@ -207,19 +208,19 @@
     font-size: 17px;
     line-height: 20px;
     text-decoration: none !important; }
-    .menu-list a:hover, .menu-list-next a:hover {
+    .menu-list a:hover, .menu-list-in a:hover, .menu-list-out a:hover {
       color: #4a4a4a; }
-  .menu-list a:nth-child(4), .menu-list-next a:nth-child(4) {
+  .menu-list a:nth-child(4), .menu-list-in a:nth-child(4), .menu-list-out a:nth-child(4) {
     width: 180px;
     padding: 10px;
     font-size: 17px;
     line-height: 20px;
     color: #4a4a4a;
     border: 1px solid #4a4a4a; }
-    .menu-list a:nth-child(4):hover, .menu-list-next a:nth-child(4):hover {
+    .menu-list a:nth-child(4):hover, .menu-list-in a:nth-child(4):hover, .menu-list-out a:nth-child(4):hover {
       color: #fff; }
 @media(max-width:860px) {
-  .menu-list, .menu-list-next {
+  .menu-list, .menu-list-in, .menu-list-out {
     position: fixed;
     text-align: center;
     background: #FFF;
@@ -229,19 +230,40 @@
     left: 0;
     display: none;
     padding: 0; }
-    .menu-list a, .menu-list-next a {
+    .menu-list a, .menu-list-in a, .menu-list-out a {
       width: 100%;
       margin: 0;
       font-size: 20px;
       padding: 30px; }
-    .menu-list a:nth-child(4), .menu-list-next a:nth-child(4) {
+    .menu-list a:nth-child(4), .menu-list-in a:nth-child(4), .menu-list-out a:nth-child(4) {
       display: inline-block;
       font-size: 20px;
       width: 100%;
       border: 0;
       padding: 30px; } }
+.menu-list-in {
+  animation-name: fade-in;
+  animation-timing-function: cubic-bezier(0.947, 0, 1, 1);
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: fade-in;
+  -webkit-animation-timing-function: cubic-bezier(0.947, 0, 1, 1);
+  -webkit-animation-duration: 300ms;
+  -webkit-animation-fill-mode: forwards; }
 @media(max-width:860px) {
-  .menu-list-next {
+  .menu-list-in {
+    display: block; } }
+.menu-list-out {
+  animation-name: fade-out;
+  animation-timing-function: cubic-bezier(0.947, 0, 1, 1);
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: fade-out;
+  -webkit-animation-timing-function: cubic-bezier(0.947, 0, 1, 1);
+  -webkit-animation-duration: 300ms;
+  -webkit-animation-fill-mode: forwards; }
+@media(max-width:860px) {
+  .menu-list-out {
     display: block; } }
 .menu-button {
   width: 36px;
@@ -252,16 +274,33 @@
   height: 36px;
   background-image: url(../img/menu@2x.png);
   background-repeat: no-repeat;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s; }
 @media(max-width: 600px) {
   .menu-button {
     right: 30px; } }
 @media(max-width:860px) {
   .menu-button {
     display: block; } }
-.close {
-  background-image: url(../img/group@2x.png); }
-
+.menu-button-close {
+  width: 36px;
+  display: none;
+  position: absolute;
+  right: 80px;
+  top: 60px;
+  height: 36px;
+  background-image: url(../img/group@2x.png);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s; }
+@media(max-width: 600px) {
+  .menu-button-close {
+    right: 30px; } }
+@media(max-width:860px) {
+  .menu-button-close {
+    display: block; } }
 .video-wrapper {
   position: relative;
   min-height: 100vh; }

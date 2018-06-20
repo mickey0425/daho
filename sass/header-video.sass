@@ -107,7 +107,7 @@
   animation-name: right-out
   animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
   animation-duration: 300ms
-  -webkit-animation-delay: 0ms
+  animation-delay: 0ms
   animation-fill-mode : forwards
   -webkit-animation-name: right-out
   -webkit-animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
@@ -115,10 +115,9 @@
   -webkit-animation-delay: 0ms
   -webkit-animation-fill-mode : forwards
   @media(max-width:600px)
+    -webkit-animation-play-state: paused
     animation-play-state: paused
     display: none
-
-
 
 .wrapper-btn
   position: absolute
@@ -157,7 +156,7 @@
   height: 150px
 
 .header-next
-  position: absolute
+  position: fixed
   top: -200px
   background-color: #fff
   z-index: 50
@@ -203,6 +202,7 @@
   height: 70px
   padding: 15px 0
   display: block
+
   a
     cursor: pointer
     text-align: center
@@ -215,7 +215,6 @@
     text-decoration: none !important
     &:hover
       color: #4a4a4a
-
   a:nth-child(4)
     width: 180px
     padding: 10px
@@ -225,8 +224,8 @@
     border: 1px solid #4a4a4a
     &:hover
       color: #fff
-
   @media(max-width:860px)
+
     position: fixed
     text-align: center
     background: #FFF
@@ -248,10 +247,32 @@
       border: 0
       padding: 30px
 
-.menu-list-next
+
+.menu-list-in
+  animation-name: fade-in
+  animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
+  animation-duration: 300ms
+  animation-fill-mode : forwards
+  -webkit-animation-name: fade-in
+  -webkit-animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
+  -webkit-animation-duration: 300ms
+  -webkit-animation-fill-mode : forwards
   @extend .menu-list
   @media(max-width:860px)
     display: block
+.menu-list-out
+  animation-name: fade-out
+  animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
+  animation-duration: 300ms
+  animation-fill-mode : forwards
+  -webkit-animation-name: fade-out
+  -webkit-animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
+  -webkit-animation-duration: 300ms
+  -webkit-animation-fill-mode : forwards
+  @extend .menu-list
+  @media(max-width:860px)
+    display: block
+
 
 .menu-button
   width: 36px
@@ -263,14 +284,29 @@
   background-image: url(../img/menu@2x.png)
   background-repeat: no-repeat
   cursor: pointer
+  -webkit-transition: .3s
+  transition:  .3s
   @media(max-width: 600px)
     right: 30px
   @media(max-width:860px)
     display: block
 
-.close
+.menu-button-close
+  width: 36px
+  display: none
+  position: absolute
+  right: 80px
+  top: 60px
+  height: 36px
   background-image: url(../img/group@2x.png)
-
+  background-repeat: no-repeat
+  cursor: pointer
+  -webkit-transition: .3s
+  transition:  .3s
+  @media(max-width: 600px)
+    right: 30px
+  @media(max-width:860px)
+    display: block
 
 .video-wrapper
   position: relative
@@ -389,6 +425,7 @@ video
     opacity: 0
   100%
     opacity: 1
+
 @keyframes fade-out
   0%
     opacity: 1
@@ -409,8 +446,10 @@ video
   0%
     right: 80px
     opacity: 1
+
   80%
     opacity: 0
+
   100%
     right: -388px
     opacity: 0
