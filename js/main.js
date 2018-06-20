@@ -18,6 +18,7 @@ var contant = document.getElementById('contant');
 var clothleft = document.getElementById('clothleft');
 var clothright = document.getElementById('clothright');
 
+var body = document.body
 
 // landing to index event
 video.addEventListener('click', changewrapper);
@@ -66,8 +67,8 @@ function movewraptext() {
   setTimeout(function () {
 
      wraptext.style.display= 'none'
-  }, 300); //delete wrapper-context after animation
-
+  }, 300);
+  //delete wrapper-context after animation
 }
 
 function movewrapbtn() {
@@ -97,10 +98,9 @@ function changeIcon() {
     menuButton.className = 'menu-button';
     menulist.className = 'menu-list-out';
     setTimeout(function () {
-
        menulist.className = 'menu-list';
     }, 300);
-
+   //retirn to menu-list after animation
 
   } else {
     menuButton.className = 'menu-button-close';
@@ -120,4 +120,21 @@ function gotoabout() {
 function ClothOn() {
   clothright.className = 'cloth-right-on';
   clothleft.className = 'cloth-left-on';
+}
+
+
+window.addEventListener('scroll',headerdown)
+
+function headerdown() {
+
+   if(document.documentElement.scrollTop > 200){
+
+     header.className = 'header-next'
+
+   }else{
+
+     header.className = 'header'
+
+   }
+
 }
