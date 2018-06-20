@@ -111,10 +111,15 @@ function changeIcon() {
 
 //go to about
 function gotoabout() {
-  window.scrollTo({
+    window.scrollTo({
     top: 500,
     behavior: "smooth"
-});
+  });
+  menuButton.className = 'menu-button';
+  menulist.className = 'menu-list-out';
+  setTimeout(function () {
+     menulist.className = 'menu-list';
+  }, 300);
 }
 
 function ClothOn() {
@@ -127,14 +132,17 @@ window.addEventListener('scroll',headerdown)
 
 function headerdown() {
 
-   if(document.documentElement.scrollTop > 200){
+   if( document.body.clientWidth > 860 && document.documentElement.scrollTop > 200){
 
-     header.className = 'header-next'
+     header.className = 'header-down'
+     // menu.style.padding = '0px 65px'
 
    }else{
 
-     header.className = 'header'
+     header.className = 'header-top'
+     // menu.style.padding = '30px 65px'
 
    }
+
 
 }
