@@ -113,7 +113,10 @@
   -webkit-animation-duration: 300ms;
   -webkit-animation-delay: 0ms;
   -webkit-animation-fill-mode: forwards; }
-
+@media(max-width:600px) {
+  .wrapper-context-next {
+    animation-play-state: paused;
+    display: none; } }
 .wrapper-btn {
   position: absolute;
   z-index: 49;
