@@ -13,7 +13,6 @@
   height: auto!important
   height: 100vh
   min-height: 100vh
-  // overflow: hidden
   width: 100%
 
 .wrapper-logo
@@ -32,7 +31,6 @@
   -webkit-animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
   -webkit-animation-duration: 500ms
   -webkit-animation-fill-mode : forwards
-
   img
     width: 100%
     height: 100%
@@ -40,13 +38,34 @@
     left: 50%
     transform: translateX(-50%)
 
+.wrapper-logo-next
+  @extend .wrapper-logo
+  opacity: 1
+  animation-name: left-out
+  animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
+  animation-duration: 300ms
+  animation-fill-mode : forwards
+  -webkit-animation-name: left-out
+  -webkit-animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
+  -webkit-animation-duration: 300ms
+  -webkit-animation-fill-mode : forwards
+  @media(max-width:600px)
+    animation-name: fade-out
+    animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
+    animation-duration: 300ms
+    animation-fill-mode : forwards
+    -webkit-animation-name: fade-out
+    -webkit-animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
+    -webkit-animation-duration: 300ms
+    -webkit-animation-fill-mode : forwards
+
 .wrapper-context
   position: absolute
   top: 175px
   right: 80px
   z-index: 50
   background-color: #fff
-  padding: 33px
+  padding: 33px 33px 20px
   width: 388px
   display: block
   opacity: 0
@@ -62,16 +81,66 @@
   -webkit-animation-fill-mode : forwards
   @media(max-width:600px)
     display: none
+
   h3
     font-size: 21px
     color: #4a4a4a
+    margin-bottom: 20px
   span
     font-style: italic
   p
     font-size: 14px
     line-height: 2.36
     color: #4a4a4a
+    margin-bottom: 40px
 
+.wrapper-context-next
+  position: absolute
+  top: 175px
+  right: 80px
+  z-index: 50
+  background-color: #fff
+  padding: 33px 33px 20px
+  width: 388px
+  display: block
+  opacity: 1
+  animation-name: right-out
+  animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
+  animation-duration: 300ms
+  -webkit-animation-delay: 0ms
+  animation-fill-mode : forwards
+  -webkit-animation-name: right-out
+  -webkit-animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
+  -webkit-animation-duration: 300ms
+  -webkit-animation-delay: 0ms
+  -webkit-animation-fill-mode : forwards
+
+
+.wrapper-btn
+  position: absolute
+  z-index: 49
+  bottom: 45px
+  left: 50%
+  transform: translateX(-50%)
+  opacity: 0
+  cursor: pointer
+  width: 75px
+  height: 75px
+  background-image: url(../img/scroll-btn.png)
+  background-size: cover
+  background-repeat: no-repeat
+  animation-name: fade-in
+  animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
+  animation-duration: 500ms
+  animation-delay: 1800ms
+  animation-fill-mode : forwards
+  -webkit-animation-name: fade-in
+  -webkit-animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
+  -webkit-animation-duration: 500ms
+  -webkit-animation-delay: 1800ms
+  -webkit-animation-fill-mode : forwards
+  &:hover
+    background-image: url(../img/scroll-btn-hover.png)
 
 
 .header-first
@@ -84,8 +153,8 @@
   height: 150px
 
 .header-next
-  position: fixed
-  top: 0px
+  position: absolute
+  top: -200px
   background-color: #fff
   z-index: 50
   width: 100%
@@ -94,15 +163,18 @@
   animation-name: moveheader
   animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
   animation-duration: 500ms
-
+  animation-delay: 300ms
+  animation-fill-mode : forwards
   -webkit-animation-name: moveheader
   -webkit-animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
   -webkit-animation-duration: 500ms
+  -webkit-animation-delay: 300ms
+  -webkit-animation-fill-mode : forwards
 
 
 @keyframes moveheader
   0%
-    top: -150px
+    top: -200px
   100%
     top: 0
 
@@ -240,19 +312,7 @@ video
     object-fit: cover
     overflow: hidden
     transform: translateX(-50%)
-    animation-name: movevideo
-    animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
-    animation-duration: 500ms
-    -webkit-animation-name: movevideo
-    -webkit-animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
-    -webkit-animation-duration: 500ms
 
-
-@keyframes movevideo
-  0%
-    padding: 0 0px
-  100%
-    padding: 0 80px
 
 .cloth-left
   position: absolute
@@ -273,13 +333,17 @@ video
   width: 80px
   height: 100vh
   z-index: 50
-  left: 0px
+  left: -80px
   animation-name: movecloth-left
   animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
   animation-duration: 500ms
+  animation-delay: 300ms
+  animation-fill-mode : forwards
   -webkit-animation-name: movecloth-left
   -webkit-animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
   -webkit-animation-duration: 500ms
+  -webkit-animation-delay: 300ms
+  -webkit-animation-fill-mode : forwards
   @media(max-width: 600px)
     width: 30px
 
@@ -289,19 +353,24 @@ video
   width: 80px
   height: 100vh
   z-index: 50
-  right: 0px
+  right: -80px
   animation-name: movecloth-right
   animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
   animation-duration: 500ms
+  animation-delay: 300ms
+  animation-fill-mode : forwards
+  -webkit-animation-fill-mode : forwards
   -webkit-animation-name: movecloth-right
   -webkit-animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
   -webkit-animation-duration: 500ms
+  -webkit-animation-delay: 300ms
   @media(max-width: 600px)
     width: 30px
 
 @keyframes movecloth-left
   0%
     left: -80px
+
   100%
     left: 0
 
@@ -316,3 +385,28 @@ video
     opacity: 0
   100%
     opacity: 1
+@keyframes fade-out
+  0%
+    opacity: 1
+  100%
+    opacity: 0
+
+@keyframes left-out
+  0%
+    left: 80px
+    opacity: 1
+  80%
+    opacity: 0
+  100%
+    left: -220px
+    opacity: 0
+
+@keyframes right-out
+  0%
+    right: 80px
+    opacity: 1
+  80%
+    opacity: 0
+  100%
+    right: -388px
+    opacity: 0

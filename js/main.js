@@ -2,6 +2,10 @@
 var wrapper = document.getElementById('wrapper');
 var video = document.getElementById('video');
 
+var wraplogo = document.getElementById('wraplogo')
+var wraptext = document.getElementById('wraptext')
+var wrapbtn  = document.getElementById('wrapbtn')
+
 //header & hambugerlist
 var header = document.getElementById('header');
 var menuButton = document.getElementById('menuButton');
@@ -9,42 +13,64 @@ var menulist = document.getElementById('menulist');
 var menu = document.getElementById('menu');
 var contant = document.getElementById('contant');
 
-//gallery-button
-// var gfamily = document.getElementsByClassName('gallery-family')
-// var gwedding = document.getElementsByClassName('gallery-wedding')
-// var gvideo = document.getElementsByClassName('gallery-video')
-// var grecording = document.getElementsByClassName('gallery-recording')
 
 //cloth
 var clothleft = document.getElementById('clothleft');
 var clothright = document.getElementById('clothright');
 
 
-
+// landing to index event
 video.addEventListener('click', changewrapper);
 video.addEventListener('click', addvideocss);
 video.addEventListener('click', addheadercss);
 video.addEventListener('click', addcontantcss);
-
-menuButton.addEventListener('click', openMenu);
-menuButton.addEventListener('click', changeIcon);
 video.addEventListener('click', ClothOn);
 
-// gfamily.addEventListener('onmouseover', galleryhover)
-// gwedding.addEventListener('onmouseover', galleryhover)
-// gvideo.addEventListener('onmouseover', galleryhover)
-// grecording.addEventListener('onmouseover', galleryhover)
+video.addEventListener('click', movewraplogo);
+video.addEventListener('click', movewraptext);
+video.addEventListener('click', movewrapbtn);
 
+wrapbtn.addEventListener('click', changewrapper);
+wrapbtn.addEventListener('click', addvideocss);
+wrapbtn.addEventListener('click', addheadercss);
+wrapbtn.addEventListener('click', addcontantcss);
+wrapbtn.addEventListener('click', ClothOn);
+
+wrapbtn.addEventListener('click', movewraplogo);
+wrapbtn.addEventListener('click', movewraptext);
+wrapbtn.addEventListener('click', movewrapbtn);
+
+
+// hambuger button event
+menuButton.addEventListener('click', openMenu);
+menuButton.addEventListener('click', changeIcon);
 
 
 function changewrapper() {
   wrapper.className = 'wrapper-next';
 }
 
+
 function addvideocss() {
-  video.className = 'video-wrapper-next';
+
+  video.className = 'video-wrapper-next'
 
 }
+
+function movewraplogo() {
+  wraplogo.className = 'wrapper-logo-next';
+}
+
+function movewraptext() {
+  wraptext.className = 'wrapper-context-next';
+  
+}
+
+function movewrapbtn() {
+  wrapbtn.style.display = 'none';
+}
+
+
 
 function addheadercss() {
   header.className = 'header-next';
@@ -87,9 +113,3 @@ function ClothOn() {
   clothright.className = 'cloth-right-on';
   clothleft.className = 'cloth-left-on';
 }
-
-//galleryhover
-
-// function galleryhover (){
-//
-// }
