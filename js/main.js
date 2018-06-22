@@ -18,7 +18,7 @@ var contant = document.getElementById('contant');
 var clothleft = document.getElementById('clothleft');
 var clothright = document.getElementById('clothright');
 
-var body = document.body
+
 
 // landing to index event
 video.addEventListener('click', changewrapper);

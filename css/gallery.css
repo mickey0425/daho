@@ -1,9 +1,14 @@
 .gallery-list {
   width: 100%;
-  padding: 60px 220px;
+  padding: 60px 220px 45px;
   text-align: center;
-  background-color: #fff;
-  @media(max-width:900px); }
+  background-color: #fff; }
+@media(max-width:900px) {
+  .gallery-list {
+    padding: 60px 100px 45px; } }
+@media(max-width:600px) {
+  .gallery-list {
+    padding: 20px 30px 5px; } }
   .gallery-list button {
     cursor: pointer;
     font-size: 15px;
@@ -17,5 +22,44 @@
     -ms-flex: 0 0 100%;
     flex: 0 0 20%;
     max-width: 20%; }
+@media(max-width:900px) {
+  .gallery-list button {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%; } }
+@media(max-width:600px) {
+  .gallery-list button {
+    flex: 0 0 50%;
+    max-width: 50%; } }
+.gallery-photo-1, .gallery-photo-2, .gallery-photo-3, .gallery-photo-4, .gallery-photo-5 {
+  padding: 0 15px 145px;
+  display: block;
+  opacity: 1;
+  animation-name: fade-in;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: fade-in;
+  -webkit-animation-duration: 500ms;
+  -webkit-animation-fill-mode: forwards; }
+@media(max-width: 600px) {
+  .gallery-photo-1, .gallery-photo-2, .gallery-photo-3, .gallery-photo-4, .gallery-photo-5 {
+    padding: 0 15px 45px; } }
+.gallery-photo-2, .gallery-photo-3, .gallery-photo-4, .gallery-photo-5 {
+  display: none; }
+
+.photo-box {
+  padding: 15px;
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%; }
+@media(max-width:600px) {
+  .photo-box {
+    flex: 0 0 100%;
+    max-width: 100%; } }
+  .photo-box img {
+    width: 100%;
+    height: auto; }
 
 /*# sourceMappingURL=gallery.css.map */

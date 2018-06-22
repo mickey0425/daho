@@ -41,9 +41,6 @@
   width: 100%;
   background-color: #fff;
   padding: 0 80px; }
-@media(max-width:860px) {
-  .contant-paging {
-    top: 80px; } }
 @media(max-width :600px) {
   .contant-paging {
     padding: 0 30px; } }

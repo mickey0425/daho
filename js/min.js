@@ -95,7 +95,7 @@ function gotoindexabout() {
 
 // go to index
 function gotoindex() {
-  window.location.href = '../Daho-test/about.html'
+  window.location.href = '../about.html'
 }
 
 
