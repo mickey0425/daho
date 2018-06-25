@@ -10,6 +10,7 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js " integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4 " crossorigin="anonymous "></script>
+
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
   <link rel="stylesheet" href="css/grid.css">
@@ -54,192 +55,57 @@
 
     <div class="gallery-list">
       <div class="row no-gutters">
-        <button type="button" class="white-black" id="phbtn1">全部</button>
-        <button type="button" class="white-black" id="phbtn2">婚紗攝影</button>
-        <button type="button" class="white-black" id="phbtn3">全家福攝影</button>
-        <button type="button" class="white-black" id="phbtn4">婚禮紀錄</button>
-        <button type="button" class="white-black" id="phbtn5">動態攝影</button>
+        <button type="button" class="white-black" id="all">全部</button>
+        <button type="button" class="white-black" id="dress">婚紗攝影</button>
+        <button type="button" class="white-black" id="family">全家福攝影</button>
+        <button type="button" class="white-black" id="wedding">婚禮紀錄</button>
+        <button type="button" class="white-black" id="dynamic">動態攝影</button>
       </div>
     </div>
 
-    <div class="gallery-photo-1" id="galleryph1">
-      <div class="row no-gutters">
-
-        <div class="photo-box">
+    <div class="gallery-photo">
+      <div class="grid">
+        <div class="grid-sizer"></div>
+        <!-- setting grid size -->
+        <div class="grid-item wedding">
           <img src="img/test10.png">
         </div>
-        <div class="photo-box">
+        <div class="grid-item wedding">
+          <img src="img/test9.png">
+        </div>
+        <div class="grid-item wedding">
           <img src="img/test8.png">
         </div>
-        <div class="photo-box">
+        <div class="grid-item dress">
           <img src="img/test9.png">
         </div>
-        <div class="photo-box">
-          <img src="img/test10.png">
-        </div>
-        <div class="photo-box">
-          <img src="img/test9.png">
-        </div>
-        <div class="photo-box">
+        <div class="grid-item dress">
           <img src="img/test8.png">
         </div>
-        <div class="photo-box">
+        <div class="grid-item dress">
           <img src="img/test10.png">
         </div>
-        <div class="photo-box">
-          <img src="img/test10.png">
-        </div>
-        <div class="photo-box">
+        <div class="grid-item family">
           <img src="img/test9.png">
         </div>
-        <div class="photo-box">
-          <img src="img/test10.png">
-        </div>
-        <div class="photo-box">
-          <img src="img/test9.png">
-        </div>
-        <div class="photo-box">
+        <div class="grid-item family">
           <img src="img/test8.png">
         </div>
-      </div>
-
-    </div>
-    <div class="gallery-photo-2" id="galleryph2">
-      <div class="row no-gutters">
-
-        <div class="photo-box">
+        <div class="grid-item family">
+          <img src="img/test10.png">
+        </div>
+        <div class="grid-item dynamic">
           <img src="img/test8.png">
         </div>
-        <div class="photo-box">
-          <img src="img/test10.png">
-        </div>
-        <div class="photo-box">
+        <div class="grid-item dynamic">
           <img src="img/test9.png">
         </div>
-
-        <div class="photo-box">
-          <img src="img/test9.png">
-        </div>
-        <div class="photo-box">
-          <img src="img/test10.png">
-        </div>
-        <div class="photo-box">
+        <div class="grid-item dynamic">
           <img src="img/test8.png">
-        </div>
-        <div class="photo-box">
-          <img src="img/test9.png">
-        </div>
-        <div class="photo-box">
-          <img src="img/test10.png">
-        </div>
-      </div>
-
-    </div>
-    <div class="gallery-photo-3" id="galleryph3">
-      <div class="row no-gutters">
-
-
-        <div class="photo-box">
-          <img src="img/test10.png">
-        </div>
-        <div class="photo-box">
-          <img src="img/test8.png">
-        </div>
-        <div class="photo-box">
-          <img src="img/test10.png">
-        </div>
-        <div class="photo-box">
-          <img src="img/test9.png">
-        </div>
-        <div class="photo-box">
-          <img src="img/test8.png">
-        </div>
-        <div class="photo-box">
-          <img src="img/test9.png">
-        </div>
-      </div>
-
-    </div>
-    <div class="gallery-photo-4" id="galleryph4">
-      <div class="row no-gutters">
-
-        <div class="photo-box">
-          <img src="img/test8.png">
-        </div>
-        <div class="photo-box">
-          <img src="img/test10.png">
-        </div>
-
-        <div class="photo-box">
-          <img src="img/test9.png">
-        </div>
-        <div class="photo-box">
-          <img src="img/test9.png">
-        </div>
-        <div class="photo-box">
-          <img src="img/test9.png">
-        </div>
-        <div class="photo-box">
-          <img src="img/test9.png">
-        </div>
-        <div class="photo-box">
-          <img src="img/test10.png">
-        </div>
-        <div class="photo-box">
-          <img src="img/test8.png">
-        </div>
-        <div class="photo-box">
-          <img src="img/test10.png">
-        </div>
-        <div class="photo-box">
-          <img src="img/test9.png">
-        </div>
-      </div>
-
-    </div>
-    <div class="gallery-photo-5" id="galleryph5">
-      <div class="row no-gutters">
-
-        <div class="photo-box">
-          <img src="img/test9.png">
-        </div>
-        <div class="photo-box">
-          <img src="img/test10.png">
-        </div>
-        <div class="photo-box">
-          <img src="img/test8.png">
-        </div>
-        <div class="photo-box">
-          <img src="img/test8.png">
-        </div>
-        <div class="photo-box">
-          <img src="img/test9.png">
-        </div>
-        <div class="photo-box">
-          <img src="img/test10.png">
-        </div>
-        <div class="photo-box">
-          <img src="img/test10.png">
-        </div>
-        <div class="photo-box">
-          <img src="img/test9.png">
-        </div>
-        <div class="photo-box">
-          <img src="img/test8.png">
-        </div>
-        <div class="photo-box">
-          <img src="img/test9.png">
-        </div>
-        <div class="photo-box">
-          <img src="img/test10.png">
         </div>
 
       </div>
-
     </div>
-
-
-
 
 
     <div class="contant-paging" id="contant">
@@ -297,6 +163,8 @@
 
   <script src="js/min.js "></script>
   <script src="js/gallery.js "></script>
+  <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 
 
 </body>

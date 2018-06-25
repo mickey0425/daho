@@ -1,3 +1,6 @@
+
+
+
 .gallery-list
   width: 100%
   padding: 60px 220px 45px
@@ -6,7 +9,7 @@
   @media(max-width:900px)
     padding: 60px 100px 45px
   @media(max-width:600px)
-    padding: 20px 30px 5px
+    padding: 20px 15px 5px
   button
     cursor: pointer
     font-size: 15px
@@ -45,8 +48,6 @@
   @extend .gallery-photo-1
   display: none
 
-
-
 .photo-box
   padding: 15px
   position: relative
@@ -59,7 +60,46 @@
   @media(max-width:600px)
     flex: 0 0 100%
     max-width: 100%
-
   img
     width: 100%
     height: auto
+
+
+.gallery-photo
+  padding: 15px 30px 0
+  @media(max-width: 600px)
+    padding: 15px 15px
+
+.grid
+  width: 100%
+
+
+
+.grid:after
+  content: ''
+  display: block
+  clear: both
+
+.grid-sizer
+  width: 33.33333%
+
+  min-height: 300px
+  @media(max-width:900px)
+    width: 50%
+  @media(max-width:600px)
+    width: 100%
+    padding: 0 0 15px
+.grid-item
+  display: block
+  width: 33.33333%
+  min-height: 300px
+  padding: 0 30px 60px
+  @media(max-width:900px)
+    width: 50%
+  @media(max-width:600px)
+    width: 100%
+    padding: 0 0 15px
+  img
+    width: 100%
+    height: 100%
+    cursor: pointer

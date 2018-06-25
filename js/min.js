@@ -14,7 +14,7 @@ var contant = document.getElementById('contant');
 var clothleft = document.getElementById('clothleft');
 var clothright = document.getElementById('clothright');
 
-var body = document.body
+
 
 
 
@@ -94,9 +94,9 @@ function gotoindexabout() {
 }
 
 // go to index
-function gotoindex() {
-  window.location.href = '../about.html'
-}
+// function gotoindex() {
+//   window.location.href = '../about.html'
+// }
 
 
 function ClothOn() {

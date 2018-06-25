@@ -1,66 +1,120 @@
-var phbtn1 = document.getElementById('phbtn1')
-var phbtn2 = document.getElementById('phbtn2')
-var phbtn3 = document.getElementById('phbtn3')
-var phbtn4 = document.getElementById('phbtn4')
-var phbtn5 = document.getElementById('phbtn5')
+$(document).ready(function(){
 
-var galleryph1 = document.getElementById('galleryph1')
-var galleryph2 = document.getElementById('galleryph2')
-var galleryph3 = document.getElementById('galleryph3')
-var galleryph4 = document.getElementById('galleryph4')
-var galleryph5 = document.getElementById('galleryph5')
+//masonry ....
+  $('.grid').masonry({
 
-phbtn1.addEventListener('click',changephoto1)
-phbtn2.addEventListener('click',changephoto2)
-phbtn3.addEventListener('click',changephoto3)
-phbtn4.addEventListener('click',changephoto4)
-phbtn5.addEventListener('click',changephoto5)
+ itemSelector: '.grid-item',
+ columnWidth: '.grid-sizer',
+ percentPosition: true
 
-function changephoto1(){
-    galleryph1.style.display='block'
-    galleryph2.style.display='none'
-    galleryph3.style.display='none'
-    galleryph4.style.display='none'
-    galleryph5.style.display='none'
+});
+
+  var $grid = $('.grid').masonry({
+  // options...
+});
+// layout Masonry after each image loads
+$grid.imagesLoaded().progress( function() {
+
+  $grid.masonry('layout');
+
+});
+
+// gallery button
+$('#all').on('click',()=>{
+
+  show('all')
+
+})
+$('#dress').on('click',()=>{
+
+  show('dress')
+
+})
+$('#family').on('click',()=>{
+
+show('family')
+
+})
+
+$('#wedding').on('click',()=>{
+
+show('wedding')
+
+})
+
+$('#dynamic').on('click',()=>{
+
+show('dynamic')
+
+})
+
+function show(phototype){
+
+  switch (phototype) {
+
+    case 'all':
+
+      $('.grid-item').css('display','block')
+      $grid.masonry('layout');
+      break;
+
+    case 'dress':
+    // console.log('dress')
+      $('.dress').css('display','block')
+      $('.family').css('display','none')
+      $('.wedding').css('display','none')
+      $('.dynamic').css('display','none')
+      $grid.masonry('layout');
+      break;
+
+    case 'family':
+    // console.log('family')
+      $('.dress').css('display','none')
+      $('.family').css('display','block')
+      $('.wedding').css('display','none')
+      $('.dynamic').css('display','none')
+      $grid.masonry('layout');
+        break;
+
+    case 'wedding':
+    // console.log('weeding')
+      $('.dress').css('display','none')
+      $('.family').css('display','none')
+      $('.wedding').css('display','block')
+      $('.dynamic').css('display','none')
+      $grid.masonry('layout');
+        break;
+
+    case 'dynamic':
+    // console.log('dynamic')
+      $('.dress').css('display','none')
+      $('.family').css('display','none')
+      $('.wedding').css('display','none')
+      $('.dynamic').css('display','block')
+      $grid.masonry('layout');
+        break;
+
+    default:
+      break;
+
+  }
+
 
 }
 
 
-function changephoto2(){
-    galleryph1.style.display='none'
-    galleryph2.style.display='block'
-    galleryph3.style.display='none'
-    galleryph4.style.display='none'
-    galleryph5.style.display='none'
 
-}
+});
 
-
-function changephoto3(){
-    galleryph1.style.display='none'
-    galleryph2.style.display='none'
-    galleryph3.style.display='block'
-    galleryph4.style.display='none'
-    galleryph5.style.display='none'
-
-}
-
-
-function changephoto4(){
-    galleryph1.style.display='none'
-    galleryph2.style.display='none'
-    galleryph3.style.display='none'
-    galleryph4.style.display='block'
-    galleryph5.style.display='none'
-
-}
-
-
-function changephoto5(){
-    galleryph1.style.display='none'
-    galleryph2.style.display='none'
-    galleryph3.style.display='none'
-    galleryph4.style.display='none'
-    galleryph5.style.display='block'
-
-}
+// var all = document.getElementById('all')
+// var phbtn2 = document.getElementById('phbtn2')
+// var phbtn3 = document.getElementById('phbtn3')
+// var phbtn4 = document.getElementById('phbtn4')
+// var phbtn5 = document.getElementById('phbtn5')
+//
+//
+// all.addEventListener('click',)
+// phbtn2.addEventListener('click',)
+// phbtn3.addEventListener('click',)
+// phbtn4.addEventListener('click',)
+// phbtn5.addEventListener('click',)

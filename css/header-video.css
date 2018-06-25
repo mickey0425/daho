@@ -469,12 +469,14 @@ video {
   0% {
     left: -80px; }
   100% {
-    left: 0; } }
+    left: 0;
+    height: 600px; } }
 @keyframes movecloth-right {
   0% {
     right: -80px; }
   100% {
-    right: 0; } }
+    right: 0;
+    height: 600px; } }
 @keyframes fade-in {
   0% {
     opacity: 0; }
