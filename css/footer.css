@@ -2,8 +2,8 @@
   width: 100%; }
 
 .footer-main {
-  margin-left: -80px;
-  margin-right: -80px;
+  margin-left: -60px;
+  margin-right: -60px;
   background-color: #fbfbfb;
   padding: 20px 0; }
 @media(max-width:600px) {
@@ -126,8 +126,8 @@
     width: 315px;
     text-align: center; } }
 .footer-bottom {
-  margin-left: -80px;
-  margin-right: -80px;
+  margin-left: -60px;
+  margin-right: -60px;
   background-color: #fbfbfb; }
 @media(max-width:600px) {
   .footer-bottom {
@@ -135,7 +135,7 @@
     margin-right: -30px; } }
 .footer-tag {
   padding: 30px 0 70px;
-  margin: 0 80px;
+  margin: 0 60px;
   border-top: solid 0.5px #dbdbdb; }
 @media(max-width:600px) {
   .footer-tag {

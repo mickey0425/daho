@@ -201,7 +201,7 @@
     top: 0; } }
 .header-down > .container-fluid > .menu {
   height: 80px;
-  padding: 0 65px; }
+  padding: 0 45px; }
 @media(max-width:600px) {
   .header-down > .container-fluid > .menu {
     padding: 0 15px; } }
@@ -214,7 +214,7 @@
 @media(max-width:860px) {
   .header-next > .container-fluid > .menu, .header-down > .container-fluid > .menu {
     height: 80px;
-    padding: 0 65px; }
+    padding: 0 45px; }
   @media(max-width:600px) {
     .header-next > .container-fluid > .menu, .header-down > .container-fluid > .menu {
       padding: 0 15px; } } }
@@ -227,7 +227,7 @@
 @media(max-width:860px) {
   .header-top > .container-fluid > .menu {
     height: 80px;
-    padding: 0 65px; }
+    padding: 0 45px; }
   @media(max-width:600px) {
     .header-top > .container-fluid > .menu {
       padding: 0 15px; } } }
@@ -239,7 +239,7 @@
     top: 25px; } }
 .menu {
   height: 160px;
-  padding: 40px 65px; }
+  padding: 40px 45px; }
 @media(max-width: 600px) {
   .menu {
     padding: 40px 15px; } }
@@ -282,8 +282,9 @@
     line-height: 20px;
     color: #4a4a4a;
     border: 1px solid #4a4a4a; }
-    .menu-list a:nth-child(4):hover, .menu-list-in a:nth-child(4):hover, .menu-list-out a:nth-child(4):hover {
-      color: #fff; }
+@media(min-width:860px) {
+  .menu-list a:nth-child(4):hover, .menu-list-in a:nth-child(4):hover, .menu-list-out a:nth-child(4):hover {
+    color: #fff; } }
 @media(max-width:860px) {
   .menu-list, .menu-list-in, .menu-list-out {
     position: fixed;
@@ -340,7 +341,7 @@
   width: 36px;
   display: none;
   position: absolute;
-  right: 80px;
+  right: 60px;
   top: 65px;
   height: 36px;
   background-image: url(../img/menu@2x.png);
@@ -358,7 +359,7 @@
   width: 36px;
   display: none;
   position: absolute;
-  right: 80px;
+  right: 60px;
   top: 65px;
   height: 36px;
   background-image: url(../img/group@2x.png);
@@ -421,18 +422,18 @@ video {
 .cloth-left, .cloth-right {
   position: absolute;
   background-color: #FFF;
-  width: 80px;
+  width: 60px;
   height: 100vh;
   z-index: 50;
   left: -80px; }
 
 .cloth-right {
-  right: -80px; }
+  right: -60px; }
 
 .cloth-left-on {
   position: absolute;
   background-color: #FFF;
-  width: 80px;
+  width: 60px;
   height: 100vh;
   z-index: 50;
   left: -80px;
@@ -450,10 +451,10 @@ video {
 .cloth-right-on {
   position: absolute;
   background-color: #FFF;
-  width: 80px;
+  width: 60px;
   height: 100vh;
   z-index: 50;
-  right: -80px;
+  right: -60px;
   animation-name: movecloth-right;
   animation-duration: 500ms;
   animation-delay: 300ms;
@@ -467,13 +468,13 @@ video {
     width: 30px; } }
 @keyframes movecloth-left {
   0% {
-    left: -80px; }
+    left: -60px; }
   100% {
     left: 0;
     height: 600px; } }
 @keyframes movecloth-right {
   0% {
-    right: -80px; }
+    right: -60px; }
   100% {
     right: 0;
     height: 600px; } }

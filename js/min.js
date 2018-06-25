@@ -14,7 +14,7 @@ var contant = document.getElementById('contant');
 var clothleft = document.getElementById('clothleft');
 var clothright = document.getElementById('clothright');
 
-
+//
 
 
 
@@ -75,7 +75,7 @@ function changeIcon() {
 
 }
 
-//go to about
+//go to about & close hanbuger
 function gotoabout() {
     window.scrollTo({
     top: 500,
@@ -88,10 +88,43 @@ function gotoabout() {
   }, 300);
 }
 
-//go to index about
-function gotoindexabout() {
-  gotoindex()
+// just scroll to about (paging to index-nolanding)
+
+function scrolltoabout() {
+  window.scrollTo({
+  top: 500,
+  behavior: "smooth"
+});
+
 }
+
+// if hashtag = #about scrolltoabout
+
+window.addEventListener('load',() => {
+
+   //取得hash轉字串
+   var hash = window.location.hash.substring(1)
+   // console.log(hash)
+   switch (hash) {
+     case 'about':
+
+       scrolltoabout()
+       break;
+
+     default:
+       break;
+
+   }
+
+
+
+})
+
+
+//go to index about
+// function gotoindexabout() {
+//   gotoindex()
+// }
 
 // go to index
 // function gotoindex() {

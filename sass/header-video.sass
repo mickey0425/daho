@@ -179,8 +179,6 @@
     height: 80px
     position: fixed
 
-
-
 .header-top
   position: absolute
   top: 0px
@@ -212,7 +210,7 @@
 
 .header-down > .container-fluid > .menu
   height: 80px
-  padding: 0 65px
+  padding: 0 45px
   @media(max-width:600px)
     padding: 0 15px
 
@@ -226,7 +224,7 @@
 .header-next > .container-fluid > .menu
   @media(max-width:860px)
     height: 80px
-    padding: 0 65px
+    padding: 0 45px
     @media(max-width:600px)
       padding: 0 15px
 
@@ -241,7 +239,7 @@
 .header-top > .container-fluid > .menu
   @media(max-width:860px)
     height: 80px
-    padding: 0 65px
+    padding: 0 45px
     @media(max-width:600px)
       padding: 0 15px
 
@@ -256,7 +254,7 @@
 
 .menu
   height: 160px
-  padding: 40px 65px
+  padding: 40px 45px
   @media(max-width: 600px)
     padding: 40px 15px
 
@@ -293,7 +291,7 @@
     text-decoration: none !important
     &:hover
       color: #4a4a4a
-      
+
   a:nth-child(4)
     width: 180px
     padding: 10px
@@ -301,8 +299,9 @@
     line-height: 20px
     color: #4a4a4a
     border: 1px solid #4a4a4a
-    &:hover
-      color: #fff
+    @media(min-width:860px)
+      &:hover
+        color: #fff
   @media(max-width:860px)
     position: fixed
     text-align: center
@@ -332,8 +331,6 @@
     top: 40%
     transform: translateY(-50%)
 
-
-
 .menu-list-in
   animation-name: fade-in
   animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
@@ -347,6 +344,8 @@
 
   @media(max-width:860px)
     display: block
+
+
 .menu-list-out
   animation-name: fade-out
   animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
@@ -360,16 +359,19 @@
   @media(max-width:860px)
     display: block
 
-// .header-down > .container-fluid > .menu-list
-//   @media(max-width:860px)
-//     top : 80px
+
+//hanbuger item no hover
+// .menu-list-in > .cmenu-element > .hvr-underline-from-center
+//
+// .menu-list-in > .cmenu-element > .white-black
+
 
 
 .menu-button
   width: 36px
   display: none
   position: absolute
-  right: 80px
+  right: 60px
   top: 65px
   height: 36px
   background-image: url(../img/menu@2x.png)
@@ -386,7 +388,7 @@
   width: 36px
   display: none
   position: absolute
-  right: 80px
+  right: 60px
   top: 65px
   height: 36px
   background-image: url(../img/group@2x.png)
@@ -448,20 +450,20 @@ video
 .cloth-left
   position: absolute
   background-color: #FFF
-  width: 80px
+  width: 60px
   height: 100vh
   z-index: 50
   left: -80px
 
 .cloth-right
   @extend .cloth-left
-  right: -80px
+  right: -60px
 
 
 .cloth-left-on
   position: absolute
   background-color: #FFF
-  width: 80px
+  width: 60px
   height: 100vh
   z-index: 50
   left: -80px
@@ -481,10 +483,10 @@ video
 .cloth-right-on
   position: absolute
   background-color: #FFF
-  width: 80px
+  width: 60px
   height: 100vh
   z-index: 50
-  right: -80px
+  right: -60px
   animation-name: movecloth-right
   // animation-timing-function: cubic-bezier(0.947, 0, 1, 1)
   animation-duration: 500ms
@@ -500,7 +502,7 @@ video
 
 @keyframes movecloth-left
   0%
-    left: -80px
+    left: -60px
 
   100%
     left: 0
@@ -508,7 +510,7 @@ video
 
 @keyframes movecloth-right
   0%
-    right : -80px
+    right : -60px
   100%
     right: 0
     height: 600px

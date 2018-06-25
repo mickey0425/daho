@@ -19,10 +19,10 @@
   transition-timing-function: cubic-bezier(0.947, 0, 1, 1);
   transition-duration: 0.15s;
   transition-property: color, background-color; }
+@media(min-width:860px) {
   .white-black:hover {
     background-color: #4a4a4a;
-    color: #FFF; }
-
+    color: #FFF; } }
 .hvr-underline-from-center {
   display: inline-block;
   vertical-align: middle;

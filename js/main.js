@@ -135,13 +135,12 @@ function headerdown() {
    if( document.body.clientWidth > 860 && document.documentElement.scrollTop > 200){
 
      header.className = 'header-down'
-     // menu.style.padding = '0px 65px'
+
 
    }else{
 
      header.className = 'header-top'
-     // menu.style.padding = '30px 65px'
-
+     
    }
 
 

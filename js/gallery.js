@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
 //masonry ....
   $('.grid').masonry({
 
@@ -97,24 +96,8 @@ function show(phototype){
     default:
       break;
 
+    }
   }
 
 
-}
-
-
-
 });
-
-// var all = document.getElementById('all')
-// var phbtn2 = document.getElementById('phbtn2')
-// var phbtn3 = document.getElementById('phbtn3')
-// var phbtn4 = document.getElementById('phbtn4')
-// var phbtn5 = document.getElementById('phbtn5')
-//
-//
-// all.addEventListener('click',)
-// phbtn2.addEventListener('click',)
-// phbtn3.addEventListener('click',)
-// phbtn4.addEventListener('click',)
-// phbtn5.addEventListener('click',)
