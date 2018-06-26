@@ -30,6 +30,10 @@
   .gallery-list button {
     flex: 0 0 50%;
     max-width: 50%; } }
+  .gallery-list button:nth-child(1) {
+    background-color: #4a4a4a;
+    color: #fff; }
+
 .gallery-photo-1, .gallery-photo-2, .gallery-photo-3, .gallery-photo-4, .gallery-photo-5 {
   padding: 0 15px 145px;
   display: block;

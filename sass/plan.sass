@@ -25,10 +25,10 @@
   @media(max-width:900px)
     flex: 0 0 50%
     max-width: 50%
-
   @media(max-width:600px)
     flex: 0 0 100%
     max-width: 100%
+
 .plan-g-box
   width: 100%
   height: 100%
@@ -56,9 +56,9 @@
     line-height: 35px
     font-size: 25px
     color: #66b510
-
   span
     font-size: 15px
+
   button
     width: 187px
     height: 54px
@@ -86,3 +86,164 @@
   background-image: url(../img/group-4@2x.png)
   h5
     margin: 50px 0 0px
+
+.bounce
+  position: fixed
+  padding: 107px 0
+  width: 100vw
+  height: 100vh
+  z-index: 500
+  background-color: rgba(0,0,0,0.15)
+  display: none
+  @media(max-width:600px)
+    padding: 0 20px
+
+.planinfo-g
+  display: none
+  margin: 0 auto
+  padding: 36px
+  width: 807px
+  height: 100%
+  background-color: #fff
+  display: block
+  overflow-y: scroll
+  @media(max-width:600px)
+    width: 100%
+
+
+.planinfo-d
+  @extend .planinfo-g
+  // button
+  //   cursor: pointer
+  //   width: 270px
+  //   position: fixed
+  //   height: 44px
+  //   background-color: #4a4a4a
+  //   border: solid 1px #4a4a4a
+  //   color: white
+  //   z-index: 500
+  //   top: 606px
+
+
+.info-header
+  display: flex
+  justify-content: space-between
+  // height: 36px
+
+  border-bottom: 1px solid #dbdbdb
+  h5
+    font-size: 25px
+    color: #4a4a4a
+    margin-bottom: 5px
+    @media(max-width:600px)
+      width: 180px
+  p
+    color: #4a4a4a
+    cursor: pointer
+    font-size: 17px
+    line-height: 24px
+    margin-bottom: 0
+  span
+    margin-left: 20px
+
+.info-main
+  display: flex
+  flex-wrap: wrap
+
+.info-plan
+  padding: 0 23px 0 0
+  position: relative
+  width: 100%
+  min-height: 1px
+  -ms-flex: 0 0 100%
+  flex: 0 0 42%
+  max-width: 42%
+  button
+    cursor: pointer
+    width: 100%
+
+    height: 44px
+    background-color: #4a4a4a
+    border: solid 1px #4a4a4a
+    color: white
+    z-index: 500
+  @media(max-width:600px)
+    flex: 0 0 100%
+    max-width: 100%
+
+
+.info-plan-box
+  position: relative
+  text-align: left
+  padding: 17px 0
+  border-bottom: 1px solid #dbdbdb
+  h6
+    color: #4a4a4a
+    font-size: 17px
+    line-height: 24px
+    margin-bottom: 5px
+  h3
+    color: #4a4a4a
+    margin-bottom: 16px
+    line-height: 38px
+    opacity: 0.98
+    color: #66b510
+    font-size: 28px
+  p
+    color: #4a4a4a
+    margin-bottom: 0
+    font-size: 15px
+    line-height: 24px
+
+.info-plan-box:nth-last-child(1)
+  border: 0
+
+.info-details
+  @extend .info-plan
+  flex: 0 0 58%
+  max-width: 58%
+  padding: 17px 0 0
+  @media(max-width: 600px)
+    flex: 0 0 100%
+    max-width: 100%
+
+
+.info-details-box
+  background-color: #fbfbfb
+  padding: 30px
+  min-height: 445px
+
+.details
+  margin-bottom: 60px
+  h5
+    margin-bottom: 16px
+    line-height: 24px
+    font-size: 17px
+    color : #4a4a4a
+    font-weight: bold
+  p
+    margin-bottom: 0
+    color : #4a4a4a
+    line-height: 23px
+    font-size: 15px
+
+.note
+  margin-bottom: 7px
+  font-size: 0
+  position: relative
+  i
+    transform: rotate(45deg)
+    font-size: 7.3px
+    color: #4a4a4a
+    margin-bottom: 0
+    display: inline-block
+    position: absolute
+    top: 5px
+  p
+    margin-bottom: 0
+    line-height: 18px
+    display: inline-block
+    font-size: 13px
+    width: 100%
+    padding: 0 20px
+    color : #4a4a4a

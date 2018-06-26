@@ -1,103 +1,206 @@
-$(document).ready(function(){
-//masonry ....
+$(document).ready(function() {
+  //masonry ....
   $('.grid').masonry({
 
- itemSelector: '.grid-item',
- columnWidth: '.grid-sizer',
- percentPosition: true
+    itemSelector: '.grid-item',
+    columnWidth: '.grid-sizer',
+    percentPosition: true
 
-});
+  });
 
   var $grid = $('.grid').masonry({
-  // options...
-});
-// layout Masonry after each image loads
-$grid.imagesLoaded().progress( function() {
+    // options...
+  });
+  // layout Masonry after each image loads
+  $grid.imagesLoaded().progress(function() {
 
-  $grid.masonry('layout');
+    $grid.masonry('layout');
 
-});
+  });
 
-// gallery button
-$('#all').on('click',()=>{
+  // gallery button
+  $('#all').on('click', () => {
 
-  show('all')
+    show('all')
 
-})
-$('#dress').on('click',()=>{
+  })
+  $('#dress').on('click', () => {
 
-  show('dress')
+    show('dress')
 
-})
-$('#family').on('click',()=>{
+  })
+  $('#family').on('click', () => {
 
-show('family')
+    show('family')
 
-})
+  })
 
-$('#wedding').on('click',()=>{
+  $('#wedding').on('click', () => {
 
-show('wedding')
+    show('wedding')
 
-})
+  })
 
-$('#dynamic').on('click',()=>{
+  $('#dynamic').on('click', () => {
 
-show('dynamic')
+    show('dynamic')
 
-})
+  })
 
-function show(phototype){
+  function show(phototype) {
 
-  switch (phototype) {
+    switch (phototype) {
 
-    case 'all':
+      case 'all':
+        $('#all').css('color', '#fff')
+        $('#all').css('background', '#4a4a4a')
 
-      $('.grid-item').css('display','block')
-      $grid.masonry('layout');
-      break;
-
-    case 'dress':
-    // console.log('dress')
-      $('.dress').css('display','block')
-      $('.family').css('display','none')
-      $('.wedding').css('display','none')
-      $('.dynamic').css('display','none')
-      $grid.masonry('layout');
-      break;
-
-    case 'family':
-    // console.log('family')
-      $('.dress').css('display','none')
-      $('.family').css('display','block')
-      $('.wedding').css('display','none')
-      $('.dynamic').css('display','none')
-      $grid.masonry('layout');
+        $('.grid-item').css('display', 'block')
+        $grid.masonry('layout');
         break;
 
-    case 'wedding':
-    // console.log('weeding')
-      $('.dress').css('display','none')
-      $('.family').css('display','none')
-      $('.wedding').css('display','block')
-      $('.dynamic').css('display','none')
-      $grid.masonry('layout');
+      case 'dress':
+        // console.log('dress')
+        $('#dress').css('color', '#fff')
+        $('#dress').css('background', '#4a4a4a')
+
+        $('.dress').css('display', 'block')
+        $('.family').css('display', 'none')
+        $('.wedding').css('display', 'none')
+        $('.dynamic').css('display', 'none')
+        $grid.masonry('layout');
         break;
 
-    case 'dynamic':
-    // console.log('dynamic')
-      $('.dress').css('display','none')
-      $('.family').css('display','none')
-      $('.wedding').css('display','none')
-      $('.dynamic').css('display','block')
-      $grid.masonry('layout');
+      case 'family':
+        // console.log('family')
+        $('#family').css('color', '#fff')
+        $('#family').css('background', '#4a4a4a')
+
+        $('.dress').css('display', 'none')
+        $('.family').css('display', 'block')
+        $('.wedding').css('display', 'none')
+        $('.dynamic').css('display', 'none')
+        $grid.masonry('layout');
         break;
 
-    default:
-      break;
+      case 'wedding':
+        // console.log('weeding')
+        $('#family').css('color', '#fff')
+        $('#family').css('background', '#4a4a4a')
+        $('.dress').css('display', 'none')
+        $('.family').css('display', 'none')
+        $('.wedding').css('display', 'block')
+        $('.dynamic').css('display', 'none')
+        $grid.masonry('layout');
+        break;
+
+      case 'dynamic':
+        // console.log('dynamic')
+        $('#dynamic').css('color', '#fff')
+        $('#dynamic').css('background', '#4a4a4a')
+        $('.dress').css('display', 'none')
+        $('.family').css('display', 'none')
+        $('.wedding').css('display', 'none')
+        $('.dynamic').css('display', 'block')
+        $grid.masonry('layout');
+        break;
+
+      default:
+        break;
 
     }
   }
 
+  $('#all').on('click', () => {
+
+    backcolor('all')
+
+  })
+  $('#dress').on('click', () => {
+
+    backcolor('dress')
+
+  })
+  $('#family').on('click', () => {
+
+    backcolor('family')
+
+  })
+
+  $('#wedding').on('click', () => {
+
+    backcolor('wedding')
+
+  })
+
+  $('#dynamic').on('click', () => {
+
+    backcolor('dynamic')
+
+  })
+
+  function backcolor(colortype) {
+    switch (colortype) {
+      case 'all':
+
+      $('#dress').css('color', '#4a4a4a')
+      $('#dress').css('background', '#fff')
+      $('#family').css('color', '#4a4a4a')
+      $('#family').css('background', '#fff')
+      $('#wedding').css('color', '#4a4a4a')
+      $('#wedding').css('background', '#fff')
+      $('#dynamic').css('color', '#4a4a4a')
+      $('#dynamic').css('background', '#fff')
+        break;
+
+      case 'dress':
+      $('#all').css('color', '#4a4a4a')
+      $('#all').css('background', '#fff')
+      $('#family').css('color', '#4a4a4a')
+      $('#family').css('background', '#fff')
+      $('#wedding').css('color', '#4a4a4a')
+      $('#wedding').css('background', '#fff')
+      $('#dynamic').css('color', '#4a4a4a')
+      $('#dynamic').css('background', '#fff')
+        break;
+
+      case 'family':
+      $('#all').css('color', '#4a4a4a')
+      $('#all').css('background', '#fff')
+      $('#dress').css('color', '#4a4a4a')
+      $('#dress').css('background', '#fff')
+      $('#wedding').css('color', '#4a4a4a')
+      $('#wedding').css('background', '#fff')
+      $('#dynamic').css('color', '#4a4a4a')
+      $('#dynamic').css('background', '#fff')
+        break;
+
+      case 'wedding':
+      $('#all').css('color', '#4a4a4a')
+      $('#all').css('background', '#fff')
+      $('#dress').css('color', '#4a4a4a')
+      $('#dress').css('background', '#fff')
+      $('#family').css('color', '#4a4a4a')
+      $('#family').css('background', '#fff')
+      $('#dynamic').css('color', '#4a4a4a')
+      $('#dynamic').css('background', '#fff')
+        break;
+
+      case 'dynamic':
+      $('#all').css('color', '#4a4a4a')
+      $('#all').css('background', '#fff')
+      $('#dress').css('color', '#4a4a4a')
+      $('#dress').css('background', '#fff')
+      $('#family').css('color', '#4a4a4a')
+      $('#family').css('background', '#fff')
+      $('#wedding').css('color', '#4a4a4a')
+      $('#wedding').css('background', '#fff')
+        break;
+
+      default:
+ break;
+    }
+
+  }
 
 });
