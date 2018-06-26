@@ -116,20 +116,7 @@ window.addEventListener('load',() => {
 
    }
 
-
-
 })
-
-
-//go to index about
-// function gotoindexabout() {
-//   gotoindex()
-// }
-
-// go to index
-// function gotoindex() {
-//   window.location.href = '../about.html'
-// }
 
 
 function ClothOn() {
