@@ -63,7 +63,6 @@ $(document).ready(function() {
         // console.log('dress')
         $('#dress').css('color', '#fff')
         $('#dress').css('background', '#4a4a4a')
-
         $('.dress').css('display', 'block')
         $('.family').css('display', 'none')
         $('.wedding').css('display', 'none')
@@ -75,7 +74,6 @@ $(document).ready(function() {
         // console.log('family')
         $('#family').css('color', '#fff')
         $('#family').css('background', '#4a4a4a')
-
         $('.dress').css('display', 'none')
         $('.family').css('display', 'block')
         $('.wedding').css('display', 'none')
@@ -85,8 +83,8 @@ $(document).ready(function() {
 
       case 'wedding':
         // console.log('weeding')
-        $('#family').css('color', '#fff')
-        $('#family').css('background', '#4a4a4a')
+        $('#wedding').css('color', '#fff')
+        $('#wedding').css('background', '#4a4a4a')
         $('.dress').css('display', 'none')
         $('.family').css('display', 'none')
         $('.wedding').css('display', 'block')
@@ -198,7 +196,7 @@ $(document).ready(function() {
         break;
 
       default:
- break;
+      break;
     }
 
   }
