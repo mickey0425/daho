@@ -29,8 +29,6 @@
 
 
 // underline-from-center
-
-
 .hvr-underline-from-center
   display: inline-block
   vertical-align: middle
@@ -39,15 +37,13 @@
   position: relative
   overflow: hidden
 
-
-
 .hvr-underline-from-center:before
   content: ""
   position: absolute
   z-index: -1
   left: 51%
   right: 51%
-  bottom: 0
+  bottom: 0px
   background: #4a4a4a
   height: 2.9px
   -webkit-transition-property: left, right
@@ -57,9 +53,38 @@
   -webkit-transition-timing-function: cubic-bezier(0.947, 0, 1, 1)
   transition-timing-function: cubic-bezier(0.947, 0, 1, 1)
 
-
-
 .hvr-underline-from-center:active:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:hover:before
+  left: 0
+  right: 0
+  @media(max-width:860px)
+    left: 51%
+    right: 51%
+//hvr-underline
+.hvr-underline
+  display: inline-block
+  vertical-align: middle
+  -webkit-transform: perspective(1px) translateZ(0)
+  transform: perspective(1px) translateZ(0)
+  position: relative
+  overflow: hidden
+
+.hvr-underline:before
+  content: ""
+  position: absolute
+  z-index: -1
+  left: 0
+  right: 0
+  bottom: 0px
+  background: #4a4a4a
+  height: 2.9px
+  -webkit-transition-property: left, right
+  transition-property: left, right
+  -webkit-transition-duration: .15s
+  transition-duration: .15s
+  -webkit-transition-timing-function: cubic-bezier(0.947, 0, 1, 1)
+  transition-timing-function: cubic-bezier(0.947, 0, 1, 1)
+
+.hvr-underline:active:before, .hvr-underline:focus:before, .hvr-underline:hover:before
   left: 0
   right: 0
   @media(max-width:860px)

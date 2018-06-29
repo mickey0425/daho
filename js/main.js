@@ -143,7 +143,6 @@ function headerdown() {
 
      header.className = 'header-down'
 
-
    }else{
 
      header.className = 'header-top'

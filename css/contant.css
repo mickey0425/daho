@@ -36,7 +36,9 @@
     bottom: -300px; } }
 .about-us {
   margin-top: 100px; }
-
+@media(max-width:600px) {
+  .about-us {
+    margin-top: 36px; } }
 @media(max-width: 600px) {
   .about-us-main {
     flex-direction: column-reverse; } }
@@ -69,7 +71,7 @@
     text-align: center; } }
 @media(max-width: 600px) {
   .about-contant {
-    margin-top: 50px; } }
+    margin-top: 16pxpx; } }
 .gallery {
   margin: 50px 0 90px; }
 

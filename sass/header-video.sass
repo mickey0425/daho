@@ -188,8 +188,6 @@
   @media(max-width:860px)
     position: fixed
 
-
-
 .header-down
   @extend .header-next
   position: fixed
@@ -363,8 +361,6 @@
 // .menu-list-in > .cmenu-element > .hvr-underline-from-center
 //
 // .menu-list-in > .cmenu-element > .white-black
-
-
 
 .menu-button
   width: 36px
@@ -550,7 +546,14 @@
     right: -388px
     opacity: 0
 
-.bord-b
-  border-bottom: 2.9px solid #4a4a4a
+.bord-b:before
+  content: ""
+  position: absolute
+  z-index: -1
+  left: 0
+  right: 0
+  bottom: 0px
+  background: #4a4a4a
+  height: 2.9px
   @media(max-width:860px)
-    border-bottom: 0
+    height: 0

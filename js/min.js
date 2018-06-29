@@ -126,7 +126,6 @@ window.addEventListener('load',() => {
 
 })
 
-
 function ClothOn() {
   clothright.className = 'cloth-right-on';
   clothleft.className = 'cloth-left-on';
