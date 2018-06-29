@@ -5,7 +5,51 @@ input:focus
   outline: 0
 
 textarea:focus
-  outline: 0 
+  outline: 0
+
+
+.loading
+  position: fixed
+  margin: 0
+  display: block
+  height: auto !important
+  height: 100vh
+  min-height: 100vh
+  overflow: hidden
+  width: 100%
+  background-color: #fff
+  z-index: 500
+  display: block
+  text-align: center
+  img
+    width: 289px
+    height: 123px
+    position: absolute
+    top: 50%
+    transform: translate(-50%,-50%)
+
+.mask
+  width: 289px
+  height: 123px
+  z-index: 501
+  background-color: rgba(255,2552,255,0.87)
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+  animation-name: mask-move
+  animation-duration: 1000ms
+  animation-iteration-count: infinite
+  -webkit-animation-name: mask-move
+  -webkit-animation-duration: 1000ms
+  -webkit-animation-iteration-count: infinite
+  
+
+@keyframes mask-move
+  0%
+    top: 50%
+  100%
+    top: calc(50% - 123px)
 
 
 

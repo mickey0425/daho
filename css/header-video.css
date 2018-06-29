@@ -506,5 +506,10 @@ video {
   100% {
     right: -388px;
     opacity: 0; } }
+.bord-b {
+  border-bottom: 2.9px solid #4a4a4a; }
+@media(max-width:860px) {
+  .bord-b {
+    border-bottom: 0; } }
 
 /*# sourceMappingURL=header-video.css.map */

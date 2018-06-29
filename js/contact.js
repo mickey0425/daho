@@ -15,19 +15,13 @@ $(document).ready(function() {
         $(this).removeClass('checkback')
       default:
         break;
-
     }
-
   }
 
   $('#push').on('click',()=>{
      $('#bounce').css('display','block')
   })
 
-  $('#back').on('click',()=>{
-
-
-
-  })
+  
 
 });

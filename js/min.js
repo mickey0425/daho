@@ -1,7 +1,6 @@
 //wrapper-video
 var wrapper = document.getElementById('wrapper');
 
-
 //header & hambugerlist
 var header = document.getElementById('header');
 var menuButton = document.getElementById('menuButton');
@@ -141,3 +140,11 @@ function headerdown() {
 
    }
 }
+
+//loading 1sec to page （animation 有循環播放）
+
+var loading = document.getElementById('loading')
+
+  setTimeout(function () {
+     loading.style.display = 'none';
+  }, 1000);
