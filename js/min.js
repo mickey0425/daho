@@ -13,15 +13,10 @@ var contant = document.getElementById('contant');
 var clothleft = document.getElementById('clothleft');
 var clothright = document.getElementById('clothright');
 
-//
-
-
-
 
 // hambuger button event
-menuButton.addEventListener('click', openMenu);
+// menuButton.addEventListener('click', openMenu);
 menuButton.addEventListener('click', changeIcon);
-
 
 function changewrapper() {
   wrapper.className = 'wrapper-next';
@@ -29,9 +24,7 @@ function changewrapper() {
 
 
 function addvideocss() {
-
   video.className = 'video-wrapper-next'
-
 }
 
 function movewraplogo() {
@@ -49,13 +42,13 @@ function movewraptext() {
 
 
 
-function openMenu() {
-  // if (menu.className.indexOf('menu open') >= 0) {
-  //   menu.className = 'menu';
-  // } else {
-  //   menu.className = 'menu open';
-  // }
-}
+// function openMenu() {
+//   if (menu.className.indexOf('menu open') >= 0) {
+//     menu.className = 'menu';
+//   } else {
+//     menu.className = 'menu open';
+//   }
+// }
 
 function changeIcon() {
 
@@ -65,7 +58,7 @@ function changeIcon() {
     setTimeout(function () {
        menulist.className = 'menu-list';
     }, 300);
-   //retirn to menu-list after animation
+   //return to menu-list after animation
 
   } else {
     menuButton.className = 'menu-button-close';
@@ -76,10 +69,18 @@ function changeIcon() {
 
 //go to about & close hanbuger
 function gotoabout() {
+
+  if(document.body.clientWidth > 600){
     window.scrollTo({
-    top: 500,
+    top: 600,
     behavior: "smooth"
-  });
+  })
+}else{
+    window.scrollTo({
+    top: 450,
+    behavior: "smooth"
+  })
+}
   menuButton.className = 'menu-button';
   menulist.className = 'menu-list-out';
   setTimeout(function () {
@@ -90,10 +91,18 @@ function gotoabout() {
 // just scroll to about (paging to index-nolanding)
 
 function scrolltoabout() {
-  window.scrollTo({
-  top: 500,
-  behavior: "smooth"
-});
+
+  if(document.body.clientWidth > 600){
+    window.scrollTo({
+    top: 600,
+    behavior: "smooth"
+  })
+}else{
+    window.scrollTo({
+    top: 450,
+    behavior: "smooth"
+  })
+}
 
 }
 
@@ -128,7 +137,7 @@ window.addEventListener('scroll',headerdown)
 
 function headerdown() {
 
-   if( document.body.clientWidth > 860 && document.documentElement.scrollTop > 200){
+   if( document.body.clientWidth > 860 && document.documentElement.scrollTop > 300){
 
      header.className = 'header-down'
      // menu.style.padding = '0px 65px'

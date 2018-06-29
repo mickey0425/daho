@@ -111,10 +111,17 @@ function changeIcon() {
 
 //go to about
 function gotoabout() {
+  if(document.body.clientWidth > 600){
     window.scrollTo({
-    top: 500,
+    top: 600,
     behavior: "smooth"
-  });
+  })
+}else{
+    window.scrollTo({
+    top: 450,
+    behavior: "smooth"
+  })
+}
   menuButton.className = 'menu-button';
   menulist.className = 'menu-list-out';
   setTimeout(function () {
@@ -132,7 +139,7 @@ window.addEventListener('scroll',headerdown)
 
 function headerdown() {
 
-   if( document.body.clientWidth > 860 && document.documentElement.scrollTop > 200){
+   if( document.body.clientWidth > 860 && document.documentElement.scrollTop > 300){
 
      header.className = 'header-down'
 
@@ -140,7 +147,7 @@ function headerdown() {
    }else{
 
      header.className = 'header-top'
-     
+
    }
 
 
