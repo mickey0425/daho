@@ -28,11 +28,11 @@
   .cloth-right-on-land {
     width: 30px; } }
 .contant-next-land {
-  height: 500px;
+  height: auto;
   width: 100%;
   background-color: #fff;
-  position: absolute;
-  bottom: -300px;
+  position: relative;
+  bottom: 200px;
   padding: 0 60px;
   z-index: 250; }
 @media(max-width :600px) {
@@ -75,5 +75,10 @@
   z-index: 20;
   opacity: 0.76;
   background-color: white; }
+
+.footer-wrapper-land {
+  margin-top: -200px;
+  width: 100%;
+  background-color: #fbfbfb; }
 
 /*# sourceMappingURL=landindex.css.map */

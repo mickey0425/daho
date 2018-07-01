@@ -1,15 +1,18 @@
+.footer-wrapper {
+  width: 100%;
+  background-color: #fbfbfb; }
+
+.footer {
+  max-width: 1200px;
+  margin: 0 auto; }
+
 .footer-top {
   width: 100%; }
 
 .footer-main {
-  margin-left: -60px;
-  margin-right: -60px;
   background-color: #fbfbfb;
   padding: 20px 0; }
-@media(max-width:600px) {
-  .footer-main {
-    margin-left: -30px;
-    margin-right: -30px; } }
+@media(max-width:600px) {}
 .footer-logo {
   text-align: center;
   padding: 85px 0 95px;
@@ -90,12 +93,13 @@
     text-align: center; } }
 .footer-phone {
   height: 250px;
-  text-align: center; }
+  text-align: center;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto; }
 @media(max-width:600px) {
   .footer-phone {
-    border-bottom: solid 0.5px #dbdbdb;
-    text-align: center;
-    margin: 0 30px; } }
+    text-align: center; } }
   .footer-phone button {
     width: 290px;
     height: 43.3px;
@@ -126,21 +130,15 @@
     width: 315px;
     text-align: center; } }
 .footer-bottom {
-  margin-left: -60px;
-  margin-right: -60px;
   background-color: #fbfbfb; }
-@media(max-width:600px) {
-  .footer-bottom {
-    margin-left: -30px;
-    margin-right: -30px; } }
+@media(max-width:600px) {}
 .footer-tag {
   padding: 30px 0 70px;
-  margin: 0 60px;
+  margin: 0 50px;
   border-top: solid 0.5px #dbdbdb; }
 @media(max-width:600px) {
   .footer-tag {
-    margin: 0 30px;
-    border-top: 0; } }
+    margin: 0 30px; } }
   .footer-tag p {
     margin-bottom: 0;
     font-size: 13px; }
@@ -167,5 +165,15 @@
   .icon {
     text-align: center;
     margin-bottom: 60px; } }
+.footer-wrapper-land {
+  margin-top: -200px;
+  width: 100%;
+  background-color: #fbfbfb; }
+
+.index-footer-wrapper {
+  margin-top: -200px;
+  width: 100%;
+  background-color: #fbfbfb;
+  display: none; }
 
 /*# sourceMappingURL=footer.css.map */

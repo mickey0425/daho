@@ -18,6 +18,8 @@ var contant = document.getElementById('contant');
 var clothleft = document.getElementById('clothleft');
 var clothright = document.getElementById('clothright');
 
+var footer = document.getElementById('footer')
+
 
 
 // landing to index event
@@ -26,6 +28,7 @@ video.addEventListener('click', addvideocss);
 video.addEventListener('click', addheadercss);
 video.addEventListener('click', addcontantcss);
 video.addEventListener('click', ClothOn);
+video.addEventListener('click',showfooter)
 
 video.addEventListener('click', movewraplogo);
 video.addEventListener('click', movewraptext);
@@ -36,6 +39,7 @@ wrapbtn.addEventListener('click', addvideocss);
 wrapbtn.addEventListener('click', addheadercss);
 wrapbtn.addEventListener('click', addcontantcss);
 wrapbtn.addEventListener('click', ClothOn);
+wrapbtn.addEventListener('click',showfooter)
 
 wrapbtn.addEventListener('click', movewraplogo);
 wrapbtn.addEventListener('click', movewraptext);
@@ -77,11 +81,31 @@ function movewrapbtn() {
 
 
 function addheadercss() {
-  header.className = 'header-next';
+  header.className = 'header-next'
+
+  setTimeout(function () {
+     window.addEventListener('scroll',headerdown)
+  }, 500)
+
+  // return new Promise(function(resolve, reject) {
+  //     console.log('doSomething1 end')
+  //     resolve(1)
+  // })
+}
+
+function showfooter() {
+
+  setTimeout(function () {
+     footer.style.display='block'
+  }, 500)
+
 }
 
 function addcontantcss() {
   contant.className = 'contant-next';
+  setTimeout(function () {
+     contant.className = 'contant-next-index';
+  }, 500);
 }
 
 function openMenu() {
@@ -134,20 +158,45 @@ function ClothOn() {
   clothleft.className = 'cloth-left-on';
 }
 
+// window.addEventListener('scroll',headerdown)
 
-window.addEventListener('scroll',headerdown)
 
 function headerdown() {
 
-   if( document.body.clientWidth > 860 && document.documentElement.scrollTop > 300){
-
+   if( document.body.clientWidth > 860 && document.documentElement.scrollTop > 300 ){
      header.className = 'header-down'
-
+     // addheadercss().then(headerdown)
    }else{
-
      header.className = 'header-top'
+     // addheadercss().then(headertop)
 
    }
+}
 
+function controlheader(){
+
+  addheadercss().then(headerdown)
 
 }
+
+// function doSomething1(){
+//   console.log('doSomething1 start')
+//   return new Promise(function(resolve, reject) {
+//       console.log('doSomething1 end')
+//       resolve(1)
+//   })
+// }
+//
+// function doSomething2(){
+//   console.log('doSomething2')
+//   return 2
+// }
+//
+// function finalThing(value){
+//   console.log('finalThing')
+//   console.log(value)
+//   return 0
+// }
+//
+// //第1種傳入參數
+// doSomething1().then(doSomething2).then(finalThing)

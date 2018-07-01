@@ -5,7 +5,9 @@
   height: 100vh;
   min-height: 100vh;
   overflow: hidden;
-  width: 100%; }
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; }
 
 .wrapper-next {
   position: relative;
@@ -13,7 +15,9 @@
   height: auto !important;
   height: 100vh;
   min-height: 100vh;
-  width: 100%; }
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; }
 
 .wrapper-logo, .wrapper-logo-next {
   position: absolute;
@@ -181,6 +185,7 @@
   background-color: #fff;
   z-index: 251;
   width: 100%;
+  max-width: 1200px;
   text-align: right; }
 @media(max-width:860px) {
   .header-top {
@@ -189,6 +194,7 @@
   position: fixed;
   height: 80px;
   z-index: 251;
+  max-width: 1200px;
   animation-delay: 0ms;
   -webkit-animation-delay: 0ms; }
   .header-down img {
@@ -379,6 +385,7 @@
   min-height: 100vh;
   opacity: 0;
   z-index: 200;
+  max-width: 1200px;
   animation-name: fade-in;
   animation-timing-function: cubic-bezier(0.947, 0, 1, 1);
   animation-duration: 500ms;
@@ -393,30 +400,31 @@
     position: absolute;
     padding: 0 0;
     min-height: 100vh;
-    min-width: 100vw;
+    min-width: 100%;
     left: 50%;
     transform: translateX(-50%); }
 
 .video-wrapper-next {
+  max-width: 1200px;
   position: relative;
   min-height: 100vh;
-  z-index: 200; }
+  z-index: 200;
+  overflow: hidden; }
   .video-wrapper-next video {
     position: absolute;
     height: 100%;
     width: 100%;
     left: 50%;
     object-fit: cover;
-    overflow: hidden;
     transform: translateX(-50%); }
 
 .cloth-left, .cloth-right {
   position: absolute;
   background-color: #FFF;
   width: 60px;
-  height: 100vh;
+  height: 100%;
   z-index: 250;
-  left: -80px; }
+  left: -60px; }
 
 .cloth-right {
   right: -60px; }
@@ -427,7 +435,7 @@
   width: 60px;
   height: 100vh;
   z-index: 250;
-  left: -80px;
+  left: -60px;
   animation-name: movecloth-left;
   animation-duration: 500ms;
   animation-delay: 300ms;
@@ -461,14 +469,12 @@
   0% {
     left: -60px; }
   100% {
-    left: 0;
-    height: 600px; } }
+    left: 0; } }
 @keyframes movecloth-right {
   0% {
     right: -60px; }
   100% {
-    right: 0;
-    height: 600px; } }
+    right: 0; } }
 @keyframes fade-in {
   0% {
     opacity: 0; }
@@ -497,17 +503,5 @@
   100% {
     right: -388px;
     opacity: 0; } }
-.bord-b:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: 0;
-  right: 0;
-  bottom: 0px;
-  background: #4a4a4a;
-  height: 2.9px; }
-@media(max-width:860px) {
-  .bord-b:before {
-    height: 0; } }
 
 /*# sourceMappingURL=header-video.css.map */
