@@ -404,18 +404,11 @@
   -webkit-animation-duration: 500ms;
   -webkit-animation-delay: 1000ms;
   -webkit-animation-fill-mode: forwards; }
-  .video-wrapper-first video {
-    position: absolute;
-    padding: 0 0;
-    min-height: 100vh;
-    min-width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    @media(min-width:1440px); }
   .video-wrapper-first iframe {
     position: absolute;
     padding: 0 0;
-    min-width: 1440px;
+    height: 100vh;
+    width: calc(100vh / 9 * 16);
     left: 50%;
     transform: translateX(-50%); }
 @media(min-width:1441px) {
@@ -431,7 +424,8 @@
   .video-wrapper-next iframe {
     position: absolute;
     padding: 0 0;
-    min-width: 1440px;
+    height: 100vh;
+    width: calc(100vh / 9 * 16);
     left: 50%;
     transform: translateX(-50%); }
 @media(min-width:1441px) {

@@ -194,8 +194,8 @@ function onYouTubeIframeAPIReady() {
   var player;
   player = new YT.Player('muteYouTubeVideoPlayer', {
     videoId: 'GqDQ0cnZjus', // YouTube 影片ID
-    width: 1440,
-    height: 810,
+    // width: 1440,
+    // height: 810,
     playerVars: {
       autoplay: 1,        // 在讀取時自動播放影片
       controls: 0,        // 在播放器顯示暫停／播放按鈕
