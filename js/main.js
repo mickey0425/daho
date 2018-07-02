@@ -1,6 +1,7 @@
 //wrapper-video
 var wrapper = document.getElementById('wrapper');
 var video = document.getElementById('video');
+var touchbar = document.getElementById('touchbar');
 
 var wraplogo = document.getElementById('wraplogo')
 var wraptext = document.getElementById('wraptext')
@@ -23,16 +24,17 @@ var footer = document.getElementById('footer')
 
 
 // landing to index event
-video.addEventListener('click', changewrapper);
-video.addEventListener('click', addvideocss);
-video.addEventListener('click', addheadercss);
-video.addEventListener('click', addcontantcss);
-video.addEventListener('click', ClothOn);
-video.addEventListener('click',showfooter)
+touchbar.addEventListener('click', changewrapper);
+touchbar.addEventListener('click', addvideocss);
+touchbar.addEventListener('click', addheadercss);
+touchbar.addEventListener('click', addcontantcss);
+touchbar.addEventListener('click', ClothOn);
+touchbar.addEventListener('click',showfooter)
 
-video.addEventListener('click', movewraplogo);
-video.addEventListener('click', movewraptext);
-video.addEventListener('click', movewrapbtn);
+touchbar.addEventListener('click', movewraplogo);
+touchbar.addEventListener('click', movewraptext);
+touchbar.addEventListener('click', movewrapbtn);
+touchbar.addEventListener('click',removetouchbar);
 
 wrapbtn.addEventListener('click', changewrapper);
 wrapbtn.addEventListener('click', addvideocss);
@@ -44,6 +46,7 @@ wrapbtn.addEventListener('click',showfooter)
 wrapbtn.addEventListener('click', movewraplogo);
 wrapbtn.addEventListener('click', movewraptext);
 wrapbtn.addEventListener('click', movewrapbtn);
+wrapbtn.addEventListener('click',removetouchbar);
 
 
 // hambuger button event
@@ -77,6 +80,21 @@ function movewraptext() {
 
 function movewrapbtn() {
   wrapbtn.style.display = 'none';
+}
+
+//remove all touchbar EventListener
+function removetouchbar(){
+  touchbar.removeEventListener('click', changewrapper);
+  touchbar.removeEventListener('click', addvideocss);
+  touchbar.removeEventListener('click', addheadercss);
+  touchbar.removeEventListener('click', addcontantcss);
+  touchbar.removeEventListener('click', ClothOn);
+  touchbar.removeEventListener('click',showfooter)
+
+  touchbar.removeEventListener('click', movewraplogo);
+  touchbar.removeEventListener('click', movewraptext);
+  touchbar.removeEventListener('click', movewrapbtn);
+  touchbar.removeEventListener('click',removetouchbar);
 }
 
 
@@ -179,24 +197,34 @@ function controlheader(){
 
 }
 
-// function doSomething1(){
-//   console.log('doSomething1 start')
-//   return new Promise(function(resolve, reject) {
-//       console.log('doSomething1 end')
-//       resolve(1)
-//   })
-// }
-//
-// function doSomething2(){
-//   console.log('doSomething2')
-//   return 2
-// }
-//
-// function finalThing(value){
-//   console.log('finalThing')
-//   console.log(value)
-//   return 0
-// }
-//
-// //第1種傳入參數
-// doSomething1().then(doSomething2).then(finalThing)
+function onYouTubeIframeAPIReady() {
+  var player;
+  player = new YT.Player('muteYouTubeVideoPlayer', {
+    videoId: 'JV2ogN7-wZE', // YouTube 影片ID
+    width: 1440,
+    height: 810,
+    playerVars: {
+      autoplay: 1,        // 在讀取時自動播放影片
+      controls: 0,        // 在播放器顯示暫停／播放按鈕
+      showinfo: 1,        // 隱藏影片標題
+      modestbranding: 1,  // 隱藏YouTube Logo
+      loop: 1,            // 讓影片循環播放
+      fs: 1,              // 隱藏全螢幕按鈕
+      cc_load_policty: 0, // 隱藏字幕
+      iv_load_policy: 3 ,  // 隱藏影片註解
+      autohide: 1 ,        // 當播放影片時隱藏影片控制列
+      playlist : 'JV2ogN7-wZE' //循環播放表單
+    },
+    events: {
+      onReady: function(e) {
+        e.target.mute();
+      }
+    }
+  });
+ }
+
+ // var y = document.querySelector('iframe')
+ //
+ // y.style.height = "100vh"
+ //
+ // y.style.width = `${100/9*16}h`
