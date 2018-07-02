@@ -84,17 +84,10 @@ function movewrapbtn() {
 
 //remove all touchbar EventListener
 function removetouchbar(){
-  touchbar.removeEventListener('click', changewrapper);
-  touchbar.removeEventListener('click', addvideocss);
+
   touchbar.removeEventListener('click', addheadercss);
   touchbar.removeEventListener('click', addcontantcss);
-  touchbar.removeEventListener('click', ClothOn);
-  touchbar.removeEventListener('click',showfooter)
 
-  touchbar.removeEventListener('click', movewraplogo);
-  touchbar.removeEventListener('click', movewraptext);
-  touchbar.removeEventListener('click', movewrapbtn);
-  touchbar.removeEventListener('click',removetouchbar);
 }
 
 
@@ -200,7 +193,7 @@ function controlheader(){
 function onYouTubeIframeAPIReady() {
   var player;
   player = new YT.Player('muteYouTubeVideoPlayer', {
-    videoId: 'JV2ogN7-wZE', // YouTube 影片ID
+    videoId: 'GqDQ0cnZjus', // YouTube 影片ID
     width: 1440,
     height: 810,
     playerVars: {
@@ -213,7 +206,7 @@ function onYouTubeIframeAPIReady() {
       cc_load_policty: 0, // 隱藏字幕
       iv_load_policy: 3 ,  // 隱藏影片註解
       autohide: 1 ,        // 當播放影片時隱藏影片控制列
-      playlist : 'JV2ogN7-wZE' //循環播放表單
+      playlist : 'GqDQ0cnZjus' //循環播放表單
     },
     events: {
       onReady: function(e) {

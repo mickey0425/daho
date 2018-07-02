@@ -77,7 +77,10 @@
   transition-duration: 0.15s;
   -webkit-transition-timing-function: cubic-bezier(0.947, 0, 1, 1);
   transition-timing-function: cubic-bezier(0.947, 0, 1, 1); }
-
+@media(max-width:860px) {
+  .hvr-underline:before {
+    left: 51%;
+    right: 51%; } }
 .hvr-underline:active:before, .hvr-underline:focus:before, .hvr-underline:hover:before {
   left: 0;
   right: 0; }

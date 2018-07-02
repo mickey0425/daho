@@ -95,11 +95,82 @@ function jump(plantype) {
 
 }
 
+//關閉鈕
 $('p.close').on('click',()=>{
 
 $('#bounce').css('display','none')
 
 })
+
+
+$('#bounce').on('click',()=>{
+
+var closeplan = event.target.id
+
+switch (closeplan) {
+  case 'bounce':
+
+    $('#bounce').css('display','none')
+    $('#plang1').css('display','none')
+    $('#plang2').css('display','none')
+    $('#plang3').css('display','none')
+    $('#pland1').css('display','none')
+    $('#pland2').css('display','none')
+    $('#pland3').css('display','none')
+    break;
+
+  default:
+  break;
+}
+
+
+})
+
+// function close(closeplan) {
+//
+//   switch (closeplan) {
+//     case 'plang1':
+//
+//       $('#bounce').css('display','none')
+//       $('#plang1').css('display','none')
+//       break;
+//
+//     case 'plang2':
+//       $('#bounce').css('display','none')
+//       $('#plang2').css('display','none')
+//       break;
+//
+//
+//     case 'plang3':
+//       $('#bounce').css('display','none')
+//       $('#plang3').css('display','none')
+//
+//       break;
+//
+//     case 'pland1':
+//       $('#bounce').css('display','none')
+//       $('#pland1').css('display','none')
+//
+//       break;
+//
+//     case 'pland2':
+//
+//       $('#bounce').css('display','none')
+//
+//       $('#pland2').css('display','none')
+//
+//       break;
+//
+//     case 'pland3':
+//       $('#bounce').css('display','none')
+//
+//       $('#pland3').css('display','none')
+//       break;
+//
+//     default:
+//     break;
+//   }
+// }
 
 
 
