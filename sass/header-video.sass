@@ -24,7 +24,7 @@
 .wrapper-logo
   position: absolute
   top: 45px
-  left: 80px
+  left: 6%
   z-index: 250
   width: 220px
   height: 95px
@@ -68,7 +68,7 @@
 .wrapper-context
   position: absolute
   top: 175px
-  right: 80px
+  right: 6%
   z-index: 250
   background-color: #fff
   padding: 33px 33px 20px
@@ -151,7 +151,7 @@
     background-image: url(../img/scroll-btn-hover.png)
 
 .wrap-touch-bar
-  width:  100vw
+  width: 100%
   height: 100vh
   position: absolute
   opacity: 0
@@ -441,24 +441,16 @@
   -webkit-animation-duration: 500ms
   -webkit-animation-delay: 1000ms
   -webkit-animation-fill-mode : forwards
-  // video
-  //   position: absolute
-  //   padding: 0 0
-  //   min-height: 100vh
-  //   min-width: 100%
-  //   left: 50%
-  //   transform: translateX(-50%)
-
   iframe
     position: absolute
     padding: 0 0
+
     // min-height: 100vh
     // min-width: 100%
-    // height: 100vh
-    // width : 100vw
+    // width: 100vw
     height: 100vh
     width : calc(100vh / 9 * 16)
-    // min-width: 1440px
+    // max-width: 1440px
     left: 50%
     transform: translateX(-50%)
     @media(min-width:1441px)
@@ -471,14 +463,7 @@
   min-height: 100vh
   z-index: 200
   overflow: hidden
-  // video
-  //   position: absolute
-  //   height: 100%
-  //   width: 100%
-  //   left: 50%
-  //   object-fit: cover
-  //   // overflow: hidden
-  //   transform: translateX(-50%)
+
   iframe
     position: absolute
     padding: 0 0
@@ -575,7 +560,7 @@
 
 @keyframes left-out
   0%
-    left: 80px
+    left: 6%
     opacity: 1
   80%
     opacity: 0
@@ -585,7 +570,7 @@
 
 @keyframes right-out
   0%
-    right: 80px
+    right: 6%
     opacity: 1
 
   80%
