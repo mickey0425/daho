@@ -1,3 +1,6 @@
+
+
+
 //wrapper-video
 var wrapper = document.getElementById('wrapper');
 var video = document.getElementById('video');
@@ -18,7 +21,6 @@ var contant = document.getElementById('contant');
 //cloth
 var clothleft = document.getElementById('clothleft');
 var clothright = document.getElementById('clothright');
-
 var footer = document.getElementById('footer')
 
 
@@ -196,13 +198,16 @@ function onYouTubeIframeAPIReady() {
     videoId: 'GqDQ0cnZjus', // YouTube 影片ID
     // width: 1440,
     // height: 810,
+
     playerVars: {
+      rel: 0 ,
+      muted: 1 ,          //靜音
       autoplay: 1,        // 在讀取時自動播放影片
       controls: 0,        // 在播放器顯示暫停／播放按鈕
-      showinfo: 1,        // 隱藏影片標題
+      showinfo: 0,        // 隱藏影片標題
       modestbranding: 1,  // 隱藏YouTube Logo
       loop: 1,            // 讓影片循環播放
-      fs: 1,              // 隱藏全螢幕按鈕
+      fs: 0,              // 隱藏全螢幕按鈕
       cc_load_policty: 0, // 隱藏字幕
       iv_load_policy: 3 ,  // 隱藏影片註解
       autohide: 1 ,        // 當播放影片時隱藏影片控制列
@@ -215,6 +220,8 @@ function onYouTubeIframeAPIReady() {
     }
   });
  }
+
+
 
  // var y = document.querySelector('iframe')
  //
