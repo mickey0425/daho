@@ -42,7 +42,9 @@
   position: relative;
   bottom: 200px;
   padding: 0 60px; }
-
+@media(max-width :600px) {
+  .contant-next-index {
+    padding: 0 30px; } }
 .about-us {
   padding-top: 100px; }
 @media(max-width:600px) {
@@ -216,7 +218,7 @@
 @media(max-width:600px) {
   .plan-box, .plan-box-odd {
     display: flex;
-    height: 600px;
+    height: auto;
     flex-wrap: wrap; } }
 @media(max-width:600px) {
   .plan-box-odd {
@@ -231,7 +233,15 @@
   background-position: 50% 0; }
 @media(max-width:600px) {
   .plan-img-1, .plan-img-2, .plan-img-3, .plan-img-4 {
-    width: 100%; } }
+    width: 100%;
+    height: auto; } }
+  .plan-img-1 img, .plan-img-2 img, .plan-img-3 img, .plan-img-4 img {
+    display: none; }
+@media(max-width:600px) {
+  .plan-img-1 img, .plan-img-2 img, .plan-img-3 img, .plan-img-4 img {
+    width: 100%;
+    height: auto;
+    display: block; } }
 .plan-img-2 {
   background-image: url(../img/test2.png); }
 

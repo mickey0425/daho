@@ -104,7 +104,7 @@
   margin: 0 auto;
   padding: 36px;
   width: 807px;
-  height: 100%;
+  max-height: 100%;
   background-color: #fff;
   display: block;
   overflow-y: scroll; }
