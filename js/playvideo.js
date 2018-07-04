@@ -1,30 +1,12 @@
-$(document).ready(function(){
+// muteYouTubeVideoPlayer
+//.ytp-large-play-button
 
-
-//  function playvideo() {
-//    console.log('load')
-//   $('.ytp-large-play-button').click();
-
-// }
-
-// $('iframe').on( "load", playvideo)
-
-// setTimeout(function () {
-//   $('.ytp-large-play-button').click()
+window.onload = function(){
+// var playbtn = document.getElementsByClassName('ytp-large-play-button')
 //
-// }, 1000)
-//
-// $('.ytp-large-play-button').click()
-//
-// function playvideo(){
-//    console.log('test')
-//    $('.ytp-large-play-button').click();
-// }
+// console.log(playbtn)
+//   playbtn.click()
 
-
-
-
-// function playvideo(){
-//    console.log('test')
-// }
-});
+// var myIframe = document.getElementById("myIframe").contentWindow;
+// console.log(myIframe)
+}

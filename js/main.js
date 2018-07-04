@@ -192,39 +192,63 @@ function controlheader(){
 
 }
 
-function onYouTubeIframeAPIReady() {
-  var player;
-  player = new YT.Player('muteYouTubeVideoPlayer', {
-    videoId: 'GqDQ0cnZjus', // YouTube 影片ID
-    // width: 1440,
-    // height: 810,
+// function onYouTubeIframeAPIReady() {
+//   var player;
+//   player = new YT.Player('muteYouTubeVideoPlayer', {
+//     videoId: 'GqDQ0cnZjus', // YouTube 影片ID
+//     // width: 1440,
+//     // height: 810,
+//
+//     playerVars: {
+//       rel: 0 ,
+//       muted: 1 ,          //靜音
+//       autoplay: 1,        // 在讀取時自動播放影片
+//       controls: 0,        // 在播放器顯示暫停／播放按鈕
+//       showinfo: 0,        // 隱藏影片標題
+//       modestbranding: 1,  // 隱藏YouTube Logo
+//       loop: 1,            // 讓影片循環播放
+//       fs: 0,              // 隱藏全螢幕按鈕
+//       cc_load_policty: 0, // 隱藏字幕
+//       iv_load_policy: 3 ,  // 隱藏影片註解
+//       autohide: 1 ,        // 當播放影片時隱藏影片控制列
+//       playlist : 'GqDQ0cnZjus' //循環播放表單
+//     },
+//     events: {
+//       onReady: function(e) {
+//         e.target.mute();
+//       }
+//     }
+//   });
+//  }
 
-    playerVars: {
-      rel: 0 ,
-      muted: 1 ,          //靜音
-      autoplay: 1,        // 在讀取時自動播放影片
-      controls: 0,        // 在播放器顯示暫停／播放按鈕
-      showinfo: 0,        // 隱藏影片標題
-      modestbranding: 1,  // 隱藏YouTube Logo
-      loop: 1,            // 讓影片循環播放
-      fs: 0,              // 隱藏全螢幕按鈕
-      cc_load_policty: 0, // 隱藏字幕
-      iv_load_policy: 3 ,  // 隱藏影片註解
-      autohide: 1 ,        // 當播放影片時隱藏影片控制列
-      playlist : 'GqDQ0cnZjus' //循環播放表單
-    },
-    events: {
-      onReady: function(e) {
-        e.target.mute();
-      }
-    }
-  });
- }
+var player;
 
+function onYouTubePlayerAPIReady() {
+    player = new YT.Player('muteYouTubeVideoPlayer', {
+        playerVars: {
+          rel: 0 ,
+                muted: 1 ,          //靜音
+                autoplay: 1,        // 在讀取時自動播放影片
+                controls: 0,        // 在播放器顯示暫停／播放按鈕
+                showinfo: 0,        // 隱藏影片標題
+                modestbranding: 1,  // 隱藏YouTube Logo
+                loop: 1,            // 讓影片循環播放
+                fs: 0,              // 隱藏全螢幕按鈕
+                cc_load_policty: 0, // 隱藏字幕
+                iv_load_policy: 3 ,  // 隱藏影片註解
+                autohide: 1 ,        // 當播放影片時隱藏影片控制列
+                playlist : 'GqDQ0cnZjus' //循環播放表單
+        },
+        videoId: 'GqDQ0cnZjus',
+        events: {
+            'onReady': function(){
+      player.pauseVideo();
+      player.playVideo();
+	    }
+        }
+    });
 
+}
 
- // var y = document.querySelector('iframe')
- //
- // y.style.height = "100vh"
- //
- // y.style.width = `${100/9*16}h`
+window.onload=function() {
+};
