@@ -153,7 +153,9 @@
   opacity: 0;
   z-index: 230;
   display: block; }
-
+@media(max-width:600px) {
+  .wrap-touch-bar {
+    display: none; } }
 .header-first {
   position: absolute;
   top: -160px;
@@ -415,6 +417,18 @@
     transform: translateX(-50%); }
 @media(min-width:1440px) {
   .video-wrapper-first iframe {
+    height: calc(100vw / 16 * 9);
+    width: 100vw; } }
+  .video-wrapper-first embed {
+    position: absolute;
+    padding: 0 0;
+    align-items: stretch;
+    height: 100vh;
+    width: calc(100vh / 9 * 16);
+    left: 50%;
+    transform: translateX(-50%); }
+@media(min-width:1440px) {
+  .video-wrapper-first embed {
     height: calc(100vw / 16 * 9);
     width: 100vw; } }
 .video-wrapper-next {
