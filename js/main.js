@@ -1,6 +1,4 @@
 
-
-
 //wrapper-video
 var wrapper = document.getElementById('wrapper');
 var video = document.getElementById('video');
@@ -172,14 +170,16 @@ function ClothOn() {
 }
 
 // window.addEventListener('scroll',headerdown)
-
+// console.log()
 
 function headerdown() {
 
-   if( document.body.clientWidth > 860 && document.documentElement.scrollTop > 300 ){
+   if( document.body.clientWidth > 860 && window.scrollY > 300 ){
      header.className = 'header-down'
+
      // addheadercss().then(headerdown)
    }else{
+
      header.className = 'header-top'
      // addheadercss().then(headertop)
 
@@ -227,8 +227,9 @@ var player;
 function onYouTubePlayerAPIReady() {
     player = new YT.Player('muteYouTubeVideoPlayer', {
         playerVars: {
+          enablejsapi: 1,
           rel: 0 ,
-          muted: 1 ,          //靜音
+          muted: 0 ,          //靜音
           autoplay: 1,        // 在讀取時自動播放影片
           controls: 0,        // 在播放器顯示暫停／播放按鈕
           showinfo: 0,        // 隱藏影片標題
@@ -238,18 +239,22 @@ function onYouTubePlayerAPIReady() {
           cc_load_policty: 0, // 隱藏字幕
           iv_load_policy: 3 ,  // 隱藏影片註解
           autohide: 1 ,        // 當播放影片時隱藏影片控制列
-          playlist : 'GqDQ0cnZjus' //循環播放表單
+          playlist : 'GqDQ0cnZjus', //循環播放表單
+          playsinline: 1           //ios 不要全螢幕
         },
         videoId: 'GqDQ0cnZjus',
         events: {
-            'onReady': function(){
+            'onReady': function(e){
       // player.pauseVideo();
-      player.playVideo();
+      // player.playVideo();
+
+      e.target.mute();
 	    }
         }
     });
 
 }
 
-window.onload=function() {
-};
+// //
+// window.onload=function() {
+// };

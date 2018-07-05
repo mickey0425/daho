@@ -1,4 +1,10 @@
 
+.btn-bord
+  border-top: 1px solid #4a4a4a
+  border-bottom: 1px solid #4a4a4a
+  border-left: 1px solid #4a4a4a
+  @media(max-width:900px)
+    border-bottom: 0
 
 
 .gallery-list
@@ -14,8 +20,8 @@
   button
     cursor: pointer
     font-size: 15px
-    border: 1px  solid #4a4a4a
-
+    border: 0
+    border-right: 1px  solid #4a4a4a
     background-color: #fff
     color: #4a4a4a
     position: relative
@@ -28,7 +34,7 @@
     @media(max-width:900px)
       flex: 0 0 33.33333%
       max-width: 33.33333%
-
+      border-bottom: 1px  solid #4a4a4a
     @media(max-width:600px)
       flex: 0 0 50%
       max-width: 50%

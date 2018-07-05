@@ -136,7 +136,7 @@ window.addEventListener('scroll',headerdown)
 
 function headerdown() {
 
-   if( document.body.clientWidth > 860 && document.documentElement.scrollTop > 300){
+   if( document.body.clientWidth > 860 && window.scrollY> 300){
 
      header.className = 'header-down'
      // menu.style.padding = '0px 65px'

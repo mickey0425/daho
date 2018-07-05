@@ -19,7 +19,7 @@
   transition-timing-function: cubic-bezier(0.947, 0, 1, 1);
   transition-duration: 0.15s;
   transition-property: color, background-color; }
-@media(min-width:860px) {
+@media(min-width:600px) {
   .white-black:hover {
     background-color: #4a4a4a;
     color: #FFF; } }

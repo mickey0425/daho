@@ -1,12 +1,13 @@
 // muteYouTubeVideoPlayer
 //.ytp-large-play-button
 
-window.onload = function(){
-// var playbtn = document.getElementsByClassName('ytp-large-play-button')
-//
-// console.log(playbtn)
-//   playbtn.click()
+// window.onload = function(){
 
-// var myIframe = document.getElementById("myIframe").contentWindow;
-// console.log(myIframe)
-}
+  var iframe = window.parent.document.getElementById('muteYouTubeVideoPlayer')
+  var iwindow = iframe.contentWindow
+  console.log(iframe)
+  console.log(iwindow)
+
+  // var btn = document.getElementByClassName('ytp-large-play-button')
+  // console.log(btn)
+// }
