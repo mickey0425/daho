@@ -130,7 +130,9 @@
     margin-bottom: 0; }
   .info-header span {
     margin-left: 20px; }
-
+@media(max-width:600px) {
+  .info-header span {
+    margin-left: 10px; } }
 .info-main {
   display: flex;
   flex-wrap: wrap; }
