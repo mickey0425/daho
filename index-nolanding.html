@@ -11,7 +11,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js " integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4 " crossorigin="anonymous "></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-  <!-- <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
   <link rel="stylesheet" href="css/grid.css">
   <link rel="stylesheet" href="css/header-video.css">
   <link rel="stylesheet" href="css/animation.css">
@@ -62,14 +62,14 @@
     <div class="video-wrapper-next" id="video">
 
 
-      <div autoplay id="muteYouTubeVideoPlayer">
+      <div id="muteYouTubeVideoPlayer">
 
       </div>
     </div>
 
     <div class="contant-next-land" id="contant">
       <div class="contant-wrap">
-        <div class="about-us">
+        <div id='abouttag' class="about-us">
           <div class="about-us-logo">
             <img src="img/title.png">
           </div>
@@ -100,7 +100,7 @@
 
           <div class="row  gallery-main">
             <div class="col-md-6 col-12 gallery-family">
-              <a href="gallery.html">
+              <a href="gallery.html#Family">
                 <div class="photo-box">
                   <img src="img/gallery1.png">
                   <button class=" sweep-to-right">全家福攝影<br><span>Family</span></button>
@@ -108,7 +108,7 @@
               </a>
             </div>
             <div class="col-md-6 col-12 gallery-wedding">
-              <a href="gallery.html">
+              <a href="gallery.html#Wedding">
                 <div class="photo-box ">
                   <img src="img/gallery1.png">
                   <button class=" sweep-to-right">婚紗攝影<br><span>Wedding</span> </button>
@@ -116,7 +116,7 @@
               </a>
             </div>
             <div class="col-md-6 col-12 gallery-video">
-              <a href="gallery.html">
+              <a href="gallery.html#Video">
                 <div class="photo-box ">
                   <img src="img/gallery1.png">
                   <button class=" sweep-to-right">動態攝影<br><span>Video</span></button>
@@ -124,7 +124,7 @@
               </a>
             </div>
             <div class="col-md-6 col-12 gallery-recording">
-              <a href="gallery.html">
+              <a href="gallery.html#Recording">
                 <div class="photo-box">
                   <img src="img/gallery1.png">
                   <button class=" sweep-to-right">婚禮紀錄<br><span>Recording</span></button>
@@ -260,7 +260,7 @@
         <div class=" footer-main row no-gutters ">
           <div class="col-12 col-md-4 ">
             <div class="footer-logo ">
-              <img src="img/logo-new-01.png ">
+              <img src="img/logo-new-01@2x.png ">
             </div>
           </div>
           <div class="col-12 col-md-4 ">
@@ -284,7 +284,7 @@
                 <p>聯絡我們</p>
               </div>
               <button class="white-black ">0915-366-190</button>
-              <button class="white-black ">馬上預約</button>
+              <a href="contact.html"><button class="white-black ">馬上預約</button></a>
             </div>
           </div>
         </div>
@@ -306,8 +306,12 @@
 
 
   <script src="js/min.js "></script>
-  <script async src="https://www.youtube.com/iframe_api"></script>
 
+
+  <script async src="https://www.youtube.com/iframe_api"></script>
+  <script src="js/aboutus.js"></script>
+
+  </script>
 
 </body>
 

@@ -1,6 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Noto+Serif);
 body {
-  font-family: "Noto Serif", serif !important;
+  font-family: "Noto Serif", serif;
   -webkit-overflow-scrolling: touch; }
 
 button:focus {

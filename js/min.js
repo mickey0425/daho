@@ -1,3 +1,4 @@
+
 //wrapper-video
 var wrapper = document.getElementById('wrapper');
 
@@ -12,6 +13,10 @@ var contant = document.getElementById('contant');
 //cloth
 var clothleft = document.getElementById('clothleft');
 var clothright = document.getElementById('clothright');
+
+//about tag
+var tag = document.getElementById('abouttag')
+
 
 
 // hambuger button event
@@ -67,20 +72,26 @@ function changeIcon() {
 
 }
 
+
 //go to about & close hanbuger
 function gotoabout() {
 
-  if(document.body.clientWidth > 600){
-    window.scrollTo({
-    top: 600,
-    behavior: "smooth"
-  })
-}else{
-    window.scrollTo({
-    top: 450,
-    behavior: "smooth"
-  })
-}
+  var Y = tag.getBoundingClientRect().y  //abouttag當下距離頂端的距離(需滑動距離)
+
+    var Y0 = window.scrollY    // 當下畫面Ｙ座標
+    var dy = Y/5              //每次變量
+    var i = 0
+    var frequence = setInterval(frame,25);   //動畫頻率
+
+    function frame(){                 //動畫
+      if (i == 5) {
+         clearInterval(frequence);   //當到達abouttag 停止動畫
+      } else {
+          Y0 = Y0 + dy                //一次前進dy
+          window.scrollTo(0,Y0)
+          i++                         //動畫次數＋1
+        }
+    }
   menuButton.className = 'menu-button';
   menulist.className = 'menu-list-out';
   setTimeout(function () {
@@ -92,39 +103,26 @@ function gotoabout() {
 
 function scrolltoabout() {
 
-  if(document.body.clientWidth > 600){
-    window.scrollTo({
-    top: 600,
-    behavior: "smooth"
-  })
-}else{
-    window.scrollTo({
-    top: 450,
-    behavior: "smooth"
-  })
-}
+  var Y = tag.getBoundingClientRect().y  //abouttag當下距離頂端的距離(需滑動距離)
+
+    var Y0 = window.scrollY    // 當下畫面Ｙ座標
+    var dy = Y/5              //每次變量
+    var i = 0
+    var frequence = setInterval(frame,25);   //動畫頻率
+
+    function frame(){                 //動畫
+      if (i == 5) {
+         clearInterval(frequence);   //當到達abouttag 停止動畫
+      } else {
+          Y0 = Y0 + dy                //一次前進dy
+          window.scrollTo(0,Y0)
+          i++                         //動畫次數＋1
+        }
+    }
 
 }
 
-// if hashtag = #about scrolltoabout
 
-window.addEventListener('load',() => {
-
-   //取得hash轉字串
-   var hash = window.location.hash.substring(1)
-   // console.log(hash)
-   switch (hash) {
-     case 'about':
-
-       scrolltoabout()
-       break;
-
-     default:
-       break;
-
-   }
-
-})
 
 function ClothOn() {
   clothright.className = 'cloth-right-on';
@@ -150,7 +148,6 @@ function headerdown() {
 }
 
 //loading 1sec to page （animation 有循環播放）
-
 var loading = document.getElementById('loading')
 
   setTimeout(function () {

@@ -17,6 +17,8 @@
   text-align: center;
   padding: 85px 0 95px;
   border-right: solid 0.5px #dbdbdb; }
+  .footer-logo img {
+    max-width: 178.7px; }
 @media(max-width:600px) {
   .footer-logo {
     border-right: 0;

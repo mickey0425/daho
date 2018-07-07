@@ -56,7 +56,7 @@ $(document).ready(function() {
         $('#all').css('background', '#4a4a4a')
 
         $('.grid-item').css('display', 'block')
-        $grid.masonry('layout');
+        $grid.masonry('layout');      //刷新頁面
         break;
 
       case 'dress':
@@ -67,7 +67,7 @@ $(document).ready(function() {
         $('.family').css('display', 'none')
         $('.wedding').css('display', 'none')
         $('.dynamic').css('display', 'none')
-        $grid.masonry('layout');
+        $grid.masonry('layout');      //刷新頁面
         break;
 
       case 'family':
@@ -78,7 +78,7 @@ $(document).ready(function() {
         $('.family').css('display', 'block')
         $('.wedding').css('display', 'none')
         $('.dynamic').css('display', 'none')
-        $grid.masonry('layout');
+        $grid.masonry('layout');      //刷新頁面
         break;
 
       case 'wedding':
@@ -89,7 +89,7 @@ $(document).ready(function() {
         $('.family').css('display', 'none')
         $('.wedding').css('display', 'block')
         $('.dynamic').css('display', 'none')
-        $grid.masonry('layout');
+        $grid.masonry('layout');     //刷新頁面
         break;
 
       case 'dynamic':
@@ -100,7 +100,7 @@ $(document).ready(function() {
         $('.family').css('display', 'none')
         $('.wedding').css('display', 'none')
         $('.dynamic').css('display', 'block')
-        $grid.masonry('layout');
+        $grid.masonry('layout');      //刷新頁面
         break;
 
       default:
@@ -200,5 +200,38 @@ $(document).ready(function() {
     }
 
   }
+
+  //clik to hashtag filter
+
+    // 取得hash轉字串
+     var gallyhash = window.location.hash.substring(1)
+     // console.log(gallyhash)
+     switch (gallyhash) {
+       case 'Wedding':
+         show('dress')
+         backcolor('dress')
+         break;
+
+       case 'Family':
+
+         show('family')
+         backcolor('family')
+         break;
+
+       case 'Recording':
+         show('wedding')
+         backcolor('wedding')
+         break;
+
+       case 'Video':
+         show('dynamic')
+         backcolor('dynamic')
+         break;
+
+       default:
+         break;
+
+     }
+
 
 });

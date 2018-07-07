@@ -21,6 +21,8 @@ var clothleft = document.getElementById('clothleft');
 var clothright = document.getElementById('clothright');
 var footer = document.getElementById('footer')
 
+//about tag
+var tag = document.getElementById('abouttag')
 
 
 // landing to index event
@@ -145,18 +147,27 @@ function changeIcon() {
 }
 
 //go to about
+
 function gotoabout() {
-  if(document.body.clientWidth > 600){
-    window.scrollTo({
-    top: 600,
-    behavior: "smooth"
-  })
-}else{
-    window.scrollTo({
-    top: 450,
-    behavior: "smooth"
-  })
-}
+
+
+  var Y = tag.getBoundingClientRect().y  //abouttag當下距離頂端的距離(需滑動距離)
+
+    var Y0 = window.scrollY    // 當下畫面Ｙ座標
+    var dy = Y/5              //每次變量
+    var i = 0
+    var frequence = setInterval(frame,25);   //動畫頻率
+
+    function frame(){                 //動畫
+      if (i == 5) {
+         clearInterval(frequence);   //當到達abouttag 停止動畫
+      } else {
+          Y0 = Y0 + dy                //一次前進dy
+          window.scrollTo(0,Y0)
+          i++                         //動畫次數＋1
+        }
+    }
+
   menuButton.className = 'menu-button';
   menulist.className = 'menu-list-out';
   setTimeout(function () {
@@ -186,11 +197,11 @@ function headerdown() {
    }
 }
 
-function controlheader(){
-
-  addheadercss().then(headerdown)
-
-}
+// function controlheader(){
+//
+//   addheadercss().then(headerdown)
+//
+// }
 
 // function onYouTubeIframeAPIReady() {
 //   var player;
