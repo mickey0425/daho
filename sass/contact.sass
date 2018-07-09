@@ -82,13 +82,9 @@
   max-width: 75%
   @media(max-width:600px)
     padding: 0 15px
-  //必填項目警示
   &:hover
-    input
-      border: solid 1px #fd4c5e
     span
       display: block
-
   input
     width: 346px
     height: 46px
@@ -114,9 +110,6 @@
     @media(max-width:600px)
       top: -25px
       left: 100px
-
-
-
   textarea
     width: 100%
     height: 165px
@@ -129,11 +122,14 @@
     color: #dbdbdb
   textarea:-ms-input-placeholder
     color: #dbdbdb
-
-
   @media(max-width:600px)
     flex: 0 0 100%
     max-width: 100%
+
+.haveto
+  &:hover
+    border: solid 1px #fd4c5e
+
 
 .checkbox
   display: flex

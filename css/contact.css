@@ -79,8 +79,6 @@
 @media(max-width:600px) {
   .list-box-right {
     padding: 0 15px; } }
-  .list-box-right:hover input {
-    border: solid 1px #fd4c5e; }
   .list-box-right:hover span {
     display: block; }
   .list-box-right input {
@@ -125,6 +123,9 @@
   .list-box-right {
     flex: 0 0 100%;
     max-width: 100%; } }
+.haveto:hover {
+  border: solid 1px #fd4c5e; }
+
 .checkbox {
   display: flex;
   margin-bottom: 20px; }

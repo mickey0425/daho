@@ -157,7 +157,7 @@
   opacity: 0
   z-index: 230
   display: block
-  
+
 //header
 
 .header-first
@@ -455,38 +455,8 @@
     @media(min-width:1440px)
       height: calc(100vw / 16 * 9)
       width : 100vw
-  video
-    position: absolute
-    padding: 0 0
-    align-items: stretch
-    // min-height: 100vh
-    // min-width: 100%
-    // width: 100vw
-    height: 100vh
-    // width: 100%
-    width : calc(100vh / 9 * 16)
-    // max-width: 1440px
-    left: 50%
-    transform: translateX(-50%)
-    @media(min-width:1440px)
-      height: calc(100vw / 16 * 9)
-      width : 100vw
-
-    position: absolute
-    padding: 0 0
-    align-items: stretch
-    // min-height: 100vh
-    // min-width: 100%
-    // width: 100vw
-    height: 100vh
-    // width: 100%
-    width : calc(100vh / 9 * 16)
-    // max-width: 1440px
-    left: 50%
-    transform: translateX(-50%)
-    @media(min-width:1440px)
-      height: calc(100vw / 16 * 9)
-      width : 100vw
+    @media(max-width:600px)
+      display: none
 
 .video-wrapper-next
   // max-width: 1440px
@@ -498,7 +468,6 @@
   @media(min-width:1440px)
     height: calc(100vw / 16 * 9)
     width : 100%
-
   iframe
     position: absolute
     padding: 0 0
@@ -508,12 +477,14 @@
     // width : 100vw
     height: 100vh
     width : calc(100vh / 9 * 16)
-    // min-width: 1440px
     left: 50%
     transform: translateX(-50%)
     @media(min-width:1440px)
       height: calc(100vw / 16 * 9)
       width : 100vw
+    @media(max-width:600px)
+      display: none
+
 
 .cloth-left
   position: absolute

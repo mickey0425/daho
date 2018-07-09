@@ -417,29 +417,9 @@
   .video-wrapper-first iframe {
     height: calc(100vw / 16 * 9);
     width: 100vw; } }
-  .video-wrapper-first video {
-    position: absolute;
-    padding: 0 0;
-    align-items: stretch;
-    height: 100vh;
-    width: calc(100vh / 9 * 16);
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-    padding: 0 0;
-    align-items: stretch;
-    height: 100vh;
-    width: calc(100vh / 9 * 16);
-    left: 50%;
-    transform: translateX(-50%); }
-@media(min-width:1440px) {
-  .video-wrapper-first video {
-    height: calc(100vw / 16 * 9);
-    width: 100vw; } }
-@media(min-width:1440px) {
-  .video-wrapper-first video {
-    height: calc(100vw / 16 * 9);
-    width: 100vw; } }
+@media(max-width:600px) {
+  .video-wrapper-first iframe {
+    display: none; } }
 .video-wrapper-next {
   position: relative;
   height: 100vh;
@@ -461,6 +441,9 @@
   .video-wrapper-next iframe {
     height: calc(100vw / 16 * 9);
     width: 100vw; } }
+@media(max-width:600px) {
+  .video-wrapper-next iframe {
+    display: none; } }
 .cloth-left, .cloth-right {
   position: absolute;
   background-color: #FFF;
