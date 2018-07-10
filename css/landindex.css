@@ -45,7 +45,7 @@
 @media(max-width :600px) {
   .contant-paging {
     padding: 0 30px; } }
-.main-photo {
+.main-photo, .main-photo-gallery, .main-photo-plan, .main-photo-contact {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 80%;
@@ -57,10 +57,10 @@
   height: 400px;
   margin-bottom: 160px; }
 @media(max-width:860px) {
-  .main-photo {
+  .main-photo, .main-photo-gallery, .main-photo-plan, .main-photo-contact {
     top: 80px;
     margin-bottom: 80px; } }
-  .main-photo img {
+  .main-photo img, .main-photo-gallery img, .main-photo-plan img, .main-photo-contact img {
     position: absolute;
     z-index: 50;
     top: 50%;
@@ -68,12 +68,25 @@
     width: 275px;
     height: 92px; }
 
+.main-photo-gallery {
+  background-image: url(../img/gallery-photo@2x.jpg); }
+
+.main-photo-plan {
+  background-image: url(../img/plan-photo@2x.jpg); }
+
+.main-photo-contact {
+  background-image: url(../img/contact-photo@2x.jpg); }
+
 .main-mask {
   position: absolute;
   width: 100%;
-  height: 400px;
+  height: 100%;
   z-index: 20;
-  opacity: 0.76;
-  background-color: white; }
+  opacity: 0.45;
+  background-color: white;
+  display: none; }
+@media(max-width:600px) {
+  .main-mask {
+    display: block; } }
 
 /*# sourceMappingURL=landindex.css.map */

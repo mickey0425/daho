@@ -197,42 +197,8 @@ function headerdown() {
    }
 }
 
-// function controlheader(){
-//
-//   addheadercss().then(headerdown)
-//
-// }
 
-// function onYouTubeIframeAPIReady() {
-//   var player;
-//   player = new YT.Player('muteYouTubeVideoPlayer', {
-//     videoId: 'GqDQ0cnZjus', // YouTube 影片ID
-//     // width: 1440,
-//     // height: 810,
-//
-//     playerVars: {
-//       rel: 0 ,
-//       muted: 1 ,          //靜音
-//       autoplay: 1,        // 在讀取時自動播放影片
-//       controls: 0,        // 在播放器顯示暫停／播放按鈕
-//       showinfo: 0,        // 隱藏影片標題
-//       modestbranding: 1,  // 隱藏YouTube Logo
-//       loop: 1,            // 讓影片循環播放
-//       fs: 0,              // 隱藏全螢幕按鈕
-//       cc_load_policty: 0, // 隱藏字幕
-//       iv_load_policy: 3 ,  // 隱藏影片註解
-//       autohide: 1 ,        // 當播放影片時隱藏影片控制列
-//       playlist : 'GqDQ0cnZjus' //循環播放表單
-//     },
-//     events: {
-//       onReady: function(e) {
-//         e.target.mute();
-//       }
-//     }
-//   });
-//  }
-//
-
+//youtube api
 var player;
 
 function onYouTubePlayerAPIReady() {
@@ -250,10 +216,10 @@ function onYouTubePlayerAPIReady() {
           cc_load_policty: 0, // 隱藏字幕
           iv_load_policy: 3 ,  // 隱藏影片註解
           autohide: 1 ,        // 當播放影片時隱藏影片控制列
-          playlist : 'GqDQ0cnZjus', //循環播放表單
+          playlist : 'ClBtyhARYVc', //循環播放表單
           playsinline: 1           //ios 不要全螢幕
         },
-        videoId: 'GqDQ0cnZjus',
+        videoId: 'ClBtyhARYVc',
         events: {
             'onReady': function(e){
       // player.pauseVideo();

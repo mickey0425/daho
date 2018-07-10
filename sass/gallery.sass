@@ -99,12 +99,14 @@
   @media(max-width:600px)
     width: 100%
     padding: 0 0 15px
+
 .grid-item
 
   display: block
   width: 33.33333%
   min-height: 300px
   padding: 0 30px 60px
+
   @media(max-width:900px)
     width: 50%
   @media(max-width:600px)
@@ -114,3 +116,25 @@
     width: 100%
     height: 100%
     cursor: pointer
+  p
+    position: absolute
+    z-index: 50
+    font-size: 24px
+    color: #4a4a4a
+    z-index: 25
+    top: 50%
+    left: 50%
+    display: none
+    transform: translate(-50%,-50%)
+    @media(max-width:600px)
+      display: block
+
+.grid-box
+  position: relative
+  &:hover
+    p
+      transition-duration: 500ms
+      transition-property: display
+      display: block
+    .main-mask
+      display: block

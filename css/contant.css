@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .contant {
   height: 500px;
   width: 100%;
@@ -33,7 +34,7 @@
   0% {
     bottom: -500px; }
   100% {
-    bottom: -300px; } }
+    bottom: -200px; } }
 .contant-next-index {
   z-index: 250;
   width: 100%;
@@ -229,10 +230,10 @@
   width: calc(100% - 290px);
   height: 400px;
   display: inline-block;
-  background-image: url(../img/test1.png);
+  background-image: url(../img/plan-動態.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 50% 0; }
+  background-position: 50% 50%; }
 @media(max-width:600px) {
   .plan-img-1, .plan-img-2, .plan-img-3, .plan-img-4 {
     width: 100%;
@@ -245,13 +246,13 @@
     height: auto;
     display: block; } }
 .plan-img-2 {
-  background-image: url(../img/test2.png); }
+  background-image: url(../img/plan-婚紗.jpg); }
 
 .plan-img-3 {
-  background-image: url(../img/test3.png); }
+  background-image: url(../img/plan-婚禮.jpg); }
 
 .plan-img-4 {
-  background-image: url(../img/test2.png); }
+  background-image: url(../img/plan-婚包.jpg); }
 
 .plan-contant {
   width: 290px;
