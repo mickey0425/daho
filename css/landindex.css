@@ -60,6 +60,9 @@
   .main-photo, .main-photo-gallery, .main-photo-plan, .main-photo-contact {
     top: 80px;
     margin-bottom: 80px; } }
+@media(max-width: 600px) {
+  .main-photo, .main-photo-gallery, .main-photo-plan, .main-photo-contact {
+    height: 200px; } }
   .main-photo img, .main-photo-gallery img, .main-photo-plan img, .main-photo-contact img {
     position: absolute;
     z-index: 50;
@@ -67,7 +70,10 @@
     transform: translate(-50%, -50%);
     width: 275px;
     height: 92px; }
-
+@media(max-width:600px) {
+  .main-photo img, .main-photo-gallery img, .main-photo-plan img, .main-photo-contact img {
+    width: calc(275px*0.6);
+    height: calc(92px*0.6); } }
 .main-photo-gallery {
   background-image: url(../img/gallery-photo@2x.jpg); }
 
@@ -82,7 +88,7 @@
   width: 100%;
   height: 100%;
   z-index: 20;
-  opacity: 0.45;
+  opacity: 0.7;
   background-color: white;
   display: none; }
 @media(max-width:600px) {

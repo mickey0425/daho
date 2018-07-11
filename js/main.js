@@ -216,10 +216,10 @@ function onYouTubePlayerAPIReady() {
           cc_load_policty: 0, // 隱藏字幕
           iv_load_policy: 3 ,  // 隱藏影片註解
           autohide: 1 ,        // 當播放影片時隱藏影片控制列
-          playlist : 'ClBtyhARYVc', //循環播放表單
+          playlist : 'na0X8hTDB6w', //循環播放表單
           playsinline: 1           //ios 不要全螢幕
         },
-        videoId: 'ClBtyhARYVc',
+        videoId: 'na0X8hTDB6w',
         events: {
             'onReady': function(e){
       // player.pauseVideo();
